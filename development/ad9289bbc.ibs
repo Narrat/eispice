@@ -1,0 +1,480 @@
+|*******************************************************************
+|
+|==============================================================================|
+|                 This file is an IBIS representation of the                   |
+|                               analog devices                                 |
+|                               ad9289 all speed grades 
+|           
+|        
+|==============================================================================|
+|           
+|*************************************************************
+|
+|*********************************************************************
+|
+[IBIS Ver] 3.2
+[File Name] ad9289bbc.ibs
+[File Rev] 3.1
+[Source] Measured and created by ADI
+[Date] 10/2004
+[Notes] 
+|*********************************
+[Disclaimer]    
+|              This IBIS model is provided "AS IS, WHERE IS, AND WITH NO
+|              WARRANTY OF ANY KIND EITHER EXPRESSED OR IMPLIED, INCLUDING
+|              BUT NOT LIMITED TO ANY IMPLIED WARRANTIES OF MECHANTABILITY
+|              AND FITNESS FOR A PARTICULAR PURPOSE."
+|              
+|              In no event will ADI be liable for special, collateral,
+|              incidental, or consequential damages in connection with or
+|              arising out of the use of this IBIS model. ADI reserves the
+|              right to make changes to the products and IBIS models without
+|              prior notice.
+|
+[Copyright]         Copyright (C)2004 analog devices, All Rights Reserved
+|
+|*******
+|
+[Component] AD9289
+[Manufacturer] Analog Devices
+|
+[Package]
+
+| variable   typ   min   max
+R_pkg  0.010ohms 0.009ohms 0.011ohms
+L_pkg  1.933nH   1.900nH   1.966nH
+C_pkg  1.000pF   0.900pF   1.100pF
+|
+[Pin] signal_name  model_name  R_pin  L_pin C_pin
+|
+D8      CLK-            IN1     .101    1.60n   0.51p
+C8      CLK+            IN1     .105    1.71n   0.46p
+F3      CML             NC      .130    2.11n   0.51p
+B1      D1+A            LVDS1   .115    2.18n   0.51p
+B3      D1+B            LVDS1   .142    2.38n   0.49p
+B5      D1+C            LVDS1   .117    1.77n   0.42p
+B7      D1+D            LVDS1   .139    2.68n   0.64p
+A1      D1-A            LVDS1   .115    1.99n   0.49p
+A3      D1-B            LVDS1   .125    1.96n   0.41p
+A5      D1-C            LVDS1   .125    2.04n   0.36p
+A7      D1-D            LVDS1   .139    2.77n   0.63p
+B2      D2+A            LVDS1   .106    1.65n   0.42p
+B4      D2+B            LVDS1   .130    2.12n   0.45p
+B6      D2+C            LVDS1   .122    1.81n   0.44p
+B8      D2+D            LVDS1   .116    2.00n   0.50p
+A2      D2-A            LVDS1   .111    1.74n   0.43p
+A4      D2-B            LVDS1   .116    1.78n   0.35p
+A6      D2-C            LVDS1   .128    2.00n   0.39p
+A8      D2-D            LVDS1   .125    2.33n   0.61p
+C4      DC0+            LVDS1   .122    1.96n   0.51p
+C5      DCO-            LVDS1   .132    2.30n   0.60p
+H8      DTP             NC      .130    2.09n   0.41p
+H1      LVDSBIAS        NC      .130    2.11n   0.36p
+C2      FCO-            LVDS1   .111    1.86n   0.50p
+C1      FCO+            LVDS1   .100    1.60n   0.46p
+D2      DNC             NC      .111    1.96n   0.54p
+D1      DNC             NC      .100    1.62n   0.40p
+E3      AGND            GND     .160    3.21n   0.67p
+G6      AGND            GND     .120    1.80n   0.46p
+F6      AGND            GND     .133    2.15n   0.60p
+E6      AVDD            POWER   .143    2.48n   0.69p
+E8      PDWN            IN1     .110    1.84n   0.43p
+D4      LOCK-           NC      .142    2.63n   0.58p
+G4      REFB_A          NC      .114    1.75n   0.42p
+G5      REFB_B          NC      .115    1.76n   0.40p
+F4      REFT_A          NC      .124    2.04n   0.39p
+F5      REFT_B          NC      .127    2.11n   0.56p
+C7      DFS             IN1     .128    2.47n   0.67p
+D7      AGND            GND     .116    2.06n   0.50p
+E7      AGND            GND     .104    1.69n   0.54p
+H4      SENSE           NC      .115    1.73n   0.43p
+G3      SHARED_REF      NC      .120    1.82n   0.46p
+D5      AGND            GND     .136    2.36n   0.66p
+E2      AGND            GND     .116    1.94n   0.50p
+E1      AGND            GND     .105    1.66n   0.48p
+G1      VIN+A           NC      .107    1.88n   0.35p
+H2      VIN+B           NC      .144    2.91n   0.64p
+H7      VIN+C           NC      .137    2.85n   0.64p
+G8      VIN+D           NC      .105    1.84n   0.35p
+F1      VIN-A           NC      .108    1.86n   0.40p
+H3      VIN-B           NC      .144    2.86n   0.69p
+H6      VIN-C           NC      .138    2.77n   0.67p
+F8      VIN-D           NC      .106    1.87n   0.40p
+H5      VREF            NC      .114    1.84n   0.35p
+|
+[Model] LVDS1  
+Model_type Output
+|
+Vref=1.20
+Rref=50.0000ohms
+Cref=2.00000pF
+Vmeas=1.20000V
+C_comp 3.00000pF 3.00000pF 3.00000pF
+|
+| variable typ    min    max
+[Voltage Range]         3.00000V      NA    NA
+[POWER Clamp Reference] 3.0000V      NA    NA
+[Pullup Reference]      3.30000V      NA    NA
+[Pulldown Reference]    0.00000V      NA    NA
+[GND Clamp Reference]   0.00000V      NA    NA
+|
+[Temperature Range] 25       NA    NA 
+|                                     
+[GND Clamp]
+|
+-3.60000V   -853.207mA        NA    NA
+-3.30000V   -761.096mA        NA    NA
+-3.00000V   -668.985mA        NA    NA
+-1.02270V   -61.8804mA        NA    NA
+-1.00240V   -55.6476mA        NA    NA
+-1.00230V   -55.6169mA        NA    NA
+-860.990mV   -23.2615mA       NA    NA
+-860.930mV   -23.2477mA       NA    NA
+-860.910mV   -23.2447mA       NA    NA
+-800.340mV   -14.1538mA       NA    NA
+-800.330mV   -14.1529mA       NA    NA
+-780.200mV   -12.2115mA       NA    NA
+-739.480mV   -8.28446mA       NA    NA
+-739.460mV   -8.28348mA       NA    NA
+-719.400mV   -7.30696mA       NA    NA
+-658.770mV   -4.35551mA       NA    NA
+-658.750mV   -4.35454mA       NA    NA
+-643.510mV   -4.00121mA       NA    NA
+-582.570mV   -2.58838mA       NA    NA
+-561.970mV   -2.11079mA       NA    NA
+-542.070mV   -1.93367mA       NA    NA
+-441.140mV   -1.03531mA       NA    NA
+-441.110mV   -1.03504mA       NA    NA
+-400.500mV   -673.582uA       NA    NA
+-340.150mV   -470.583uA       NA    NA
+-319.680mV   -401.728uA       NA    NA
+-200.250mV   0.00000A         NA    NA
+-170.075mV   0.00000A         NA    NA
+-159.840mV   0.00000A         NA    NA
+0.00000V   0.00000A           NA    NA
+6.00000V   0.00000A           NA    NA
+6.60000V   0.00000A           NA    NA
+7.20000V   0.00000A           NA    NA
+|                             
+[Pulldown]                    
+|                             
+-3.60000V   -46.9785mA        NA    NA
+-3.30000V   -43.0912mA        NA    NA
+-3.00000V   -39.2039mA        NA    NA
+0.00000V   -330.528uA         NA    NA
+41.0980mV   202.011uA         NA    NA
+41.1180mV   202.270uA         NA    NA
+81.1350mV   637.589uA         NA    NA
+142.570mV   1.30590mA         NA    NA
+142.580mV   1.30598mA         NA    NA
+182.920mV   1.63147mA         NA    NA
+279.210mV   2.40840mA         NA    NA
+299.610mV   2.52496mA         NA    NA
+340.040mV   2.75596mA         NA    NA
+380.580mV   2.98759mA         NA    NA
+400.500mV   3.10140mA         NA    NA
+441.100mV   3.18952mA         NA    NA
+441.110mV   3.18954mA         NA    NA
+561.950mV   3.45180mA         NA    NA
+582.500mV   3.45180mA         NA    NA
+620.375mV   3.45180mA         NA    NA
+658.760mV   3.51060mA         NA    NA
+678.800mV   3.54130mA         NA    NA
+678.850mV   3.54130mA         NA    NA
+780.120mV   3.54130mA         NA    NA
+800.045mV   3.54130mA         NA    NA
+921.280mV   3.64559mA         NA    NA
+921.290mV   3.64560mA         NA    NA
+1.02260V   3.65189mA          NA    NA
+1.09840V   3.65660mA          NA    NA
+1.15150V   3.70133mA          NA    NA
+1.21900V   3.75818mA          NA    NA
+1.23980V   3.77570mA          NA    NA
+1.28040V   3.80990mA          NA    NA
+1.30060V   3.81013mA          NA    NA
+1.36140V   3.81082mA          NA    NA
+1.48300V   3.81220mA          NA    NA
+1.52310V   3.87890mA          NA    NA
+1.58110V   3.87890mA          NA    NA
+1.63910V   3.91640mA          NA    NA
+1.64185V   3.91640mA          NA    NA
+1.65170V   3.91640mA          NA    NA
+1.78030V   3.91640mA          NA    NA
+1.78070V   3.91640mA          NA    NA
+1.89940V   3.96896mA          NA    NA
+1.92230V   3.97910mA          NA    NA
+1.96055V   3.97910mA          NA    NA
+1.99085V   3.99146mA          NA    NA
+1.99880V   3.99470mA          NA    NA
+2.01850V   3.99470mA          NA    NA
+2.03895V   3.99470mA          NA    NA
+2.05940V   3.99470mA          NA    NA
+2.12995V   3.99470mA          NA    NA
+2.14005V   3.99470mA          NA    NA
+2.16040V   3.99470mA          NA    NA
+2.20050V   4.01214mA          NA    NA
+2.22070V   4.02093mA          NA    NA
+2.28120V   4.04725mA          NA    NA
+2.32200V   4.06500mA          NA    NA
+2.34170V   4.06500mA          NA    NA
+2.47820V   4.06500mA          NA    NA
+2.49125V   4.06500mA          NA    NA
+2.59980V   4.10322mA          NA    NA
+2.66050V   4.12460mA          NA    NA
+2.70860V   4.12785mA          NA    NA
+2.93900V   4.14344mA          NA    NA
+2.99960V   4.14754mA          NA    NA
+3.06020V   4.15164mA          NA    NA
+3.15125V   4.15779mA          NA    NA
+3.22230V   4.16260mA          NA    NA
+3.24230V   4.18047mA          NA    NA
+6.00000V   6.64504mA          NA    NA
+6.60000V   7.18126mA          NA    NA
+7.20000V   7.71748mA          NA    NA
+|                             
+[Pullup]                      
+|                             
+6.90000V   -91.5433mA         NA    NA
+6.60000V   -86.5606mA         NA    NA
+6.30000V   -81.5780mA         NA    NA
+2.41919V   -17.1221mA         NA    NA
+2.37873V   -16.4501mA         NA    NA
+2.08090V   -11.5035mA         NA    NA
+2.01960V   -10.4853mA         NA    NA
+1.99950V   -10.1515mA         NA    NA
+1.97890V   -9.80936mA         NA    NA
+1.95890V   -9.47718mA         NA    NA
+1.93860V   -9.14002mA         NA    NA
+1.85760V   -7.79470mA         NA    NA
+1.81700V   70.5390uA          NA    NA
+1.79710V   80.4468uA          NA    NA
+1.76270V   97.5739uA          NA    NA
+1.74200V   107.880uA          NA    NA
+1.72170V   107.880uA          NA    NA
+1.70140V   113.060uA          NA    NA
+1.65105V   113.060uA          NA    NA
+1.60070V   159.130uA          NA    NA
+1.58010V   159.130uA          NA    NA
+1.53960V   159.130uA          NA    NA
+1.44865V   159.130uA          NA    NA
+1.39800V   159.130uA          NA    NA
+1.35770V   159.130uA          NA    NA
+1.35745V   159.130uA          NA    NA
+1.33995V   159.130uA          NA    NA
+1.31690V   167.656uA          NA    NA
+1.28905V   177.958uA          NA    NA
+1.22040V   203.351uA          NA    NA
+1.21835V   204.109uA          NA    NA
+1.11980V   240.562uA          NA    NA
+1.07920V   255.580uA          NA    NA
+1.05880V   255.580uA          NA    NA
+930.500mV   255.580uA         NA    NA
+910.000mV   264.002uA         NA    NA
+897.200mV   269.261uA         NA    NA
+849.700mV   288.775uA         NA    NA
+802.200mV   308.289uA         NA    NA
+781.800mV   316.670uA         NA    NA
+751.300mV   316.670uA         NA    NA
+720.800mV   326.320uA         NA    NA
+700.200mV   326.320uA         NA    NA
+649.650mV   326.320uA         NA    NA
+612.050mV   340.879uA         NA    NA
+578.500mV   353.870uA         NA    NA
+568.700mV   356.310uA         NA    NA
+478.000mV   378.890uA         NA    NA
+437.200mV   384.809uA         NA    NA
+421.900mV   387.029uA         NA    NA
+388.950mV   391.809uA         NA    NA
+340.700mV   398.809uA         NA    NA
+300.000mV   404.713uA         NA    NA
+260.050mV   410.509uA         NA    NA
+98.1999mV   433.990uA         NA    NA
+19.9999mV   445.334uA         NA    NA
+0.00000V   448.236uA          NA    NA
+-58.2001mV   456.679uA        NA    NA
+-230.050mV   481.610uA        NA    NA
+-300.000mV   491.758uA        NA    NA
+-2.70000V   839.939uA         NA    NA
+-3.30000V   926.984uA         NA    NA
+-3.90000V   1.01403mA         NA    NA
+|                             
+[POWER Clamp]                 
+|                             
+6.90000V   0.00000A           NA    NA
+6.60000V   0.00000A           NA    NA
+6.30000V   0.00000A           NA    NA
+300.000mV   0.00000A          NA    NA
+141.350mV   0.00000A          NA    NA
+0.00000V   0.00000A           NA    NA
+-17.3001mV   0.00000A         NA    NA
+-38.1000mV   0.00000A         NA    NA
+-68.2500mV   0.00000A         NA    NA
+-98.4001mV   0.00000A         NA    NA
+-219.800mV   0.00000A         NA    NA
+-221.100mV   0.00000A         NA    NA
+-300.000mV   62.6140uA        NA    NA
+-300.800mV   63.2489uA        NA    NA
+-361.400mV   111.340uA        NA    NA
+-421.900mV   159.352uA        NA    NA
+-442.200mV   175.462uA        NA    NA
+-457.800mV   240.829uA        NA    NA
+-518.000mV   493.077uA        NA    NA
+-538.400mV   578.556uA        NA    NA
+-599.500mV   964.283uA        NA    NA
+-619.600mV   1.09118mA        NA    NA
+-645.900mV   1.33521mA        NA    NA
+-700.500mV   1.84184mA        NA    NA
+-741.000mV   2.56796mA        NA    NA
+-761.200mV   3.21937mA        NA    NA
+-781.500mV   3.87399mA        NA    NA
+-842.100mV   8.36690mA        NA    NA
+-882.600mV   14.4797mA        NA    NA
+-917.800mV   19.7926mA        NA    NA
+-978.200mV   32.4386mA        NA    NA
+-1.01880V   40.9390mA         NA    NA
+-1.05910V   49.3766mA         NA    NA
+-1.09950V   57.8351mA         NA    NA
+-1.16010V   70.5230mA         NA    NA
+-1.22110V   83.2946mA         NA    NA
+-2.70000V   392.932mA         NA    NA
+-3.30000V   518.554mA         NA    NA
+-3.90000V   644.176mA         NA    NA
+|                             
+|                             
+|                             
+[Falling Waveform]            
+R_fixture = 50.0000           
+V_fixture = 1.20000           
+0.00000s 1.45619V             NA    NA
+222.000ps 1.45349V            NA    NA
+338.000ps 1.45209V            NA    NA
+354.000ps 1.45189V            NA    NA
+410.000ps 1.44618V            NA    NA
+462.000ps 1.44089V            NA    NA
+532.000ps 1.43375V            NA    NA
+548.000ps 1.42021V            NA    NA
+608.000ps 1.36941V            NA    NA
+618.000ps 1.35370V            NA    NA
+690.000ps 1.24063V            NA    NA
+748.000ps 1.14955V            NA    NA
+810.000ps 1.10707V            NA    NA
+816.000ps 1.10296V            NA    NA
+902.000ps 1.07766V            NA    NA
+972.000ps 1.07227V            NA    NA
+1.07600ns 1.06426V            NA    NA
+1.47000ns 1.03392V            NA    NA
+1.59000ns 1.02468V            NA    NA
+1.99800ns 1.01742V            NA    NA
+|                             
+[Rising Waveform]             
+R_fixture = 50.0000           
+V_fixture = 1.20000           
+0.00000s 1.01742V             NA    NA
+236.000ps 1.01563V            NA    NA
+436.000ps 1.01410V            NA    NA
+492.000ps 1.02569V            NA    NA
+612.000ps 1.05050V            NA    NA
+672.000ps 1.09071V            NA    NA
+678.000ps 1.09838V            NA    NA
+726.000ps 1.15970V            NA    NA
+800.000ps 1.25424V            NA    NA
+858.000ps 1.32834V            NA    NA
+880.000ps 1.34139V            NA    NA
+902.000ps 1.35443V            NA    NA
+964.000ps 1.39119V            NA    NA
+1.04600ns 1.41507V            NA    NA
+1.09200ns 1.42847V            NA    NA
+1.19200ns 1.43810V            NA    NA
+1.26600ns 1.44522V            NA    NA
+1.31400ns 1.44984V            NA    NA
+1.51400ns 1.45170V            NA    NA
+1.99800ns 1.45619V            NA    NA
+|                             
+[Ramp]                        
+| variable typ min max        
+dV/dt_r 263.260m/237.531p     NA    NA
+dV/dt_f 263.260m/205.202p     NA    NA
+R_load = 50.0000Ohms                             
+|                             
+|                             
+[Model] IN1                   
+Model_type Input
+Vinl = 800.000mV
+Vinh = 2.00000V
+C_comp 2.00000pF 2.00000pF 2.00000pF
+|
+| variable typ    min    max
+[Voltage Range]         3.00000V  NA    NA
+[POWER Clamp Reference] 3.00000V  NA    NA
+[GND Clamp Reference]   0.00000V  NA    NA
+|
+[Temperature Range] 25       NA    NA 
+|                                 
+[GND Clamp]                       
+|                                 
+-3.30000V   -755.826mA        NA    NA    
+-1.04290V   -64.3550mA        NA    NA    
+-901.340mV   -30.1950mA       NA    NA
+-901.330mV   -30.1934mA       NA    NA
+-840.970mV   -20.7849mA       NA    NA
+-800.410mV   -14.4627mA       NA    NA
+-780.290mV   -11.3266mA       NA    NA
+-780.280mV   -11.3250mA       NA    NA
+-739.750mV   -8.00572mA       NA    NA
+-719.500mV   -6.34730mA       NA    NA
+-719.460mV   -6.34561mA       NA    NA
+-658.860mV   -3.78353mA       NA    NA
+-643.660mV   -3.14090mA       NA    NA
+-643.620mV   -3.13986mA       NA    NA
+-603.120mV   -2.08580mA       NA    NA
+-603.090mV   -2.08534mA       NA    NA
+-582.720mV   -1.77196mA       NA    NA
+-542.340mV   -1.15076mA       NA    NA
+-524.448mV   -875.503uA       NA    NA
+-522.070mV   -838.920uA       NA    NA
+-451.950mV   -557.952uA       NA    NA
+-417.656mV   -420.538uA       NA    NA
+234.800uV    0.00000A         NA    NA
+3.25775V     0.00000A         NA    NA
+6.60000V     0.00000A         NA    NA
+|                             
+[POWER Clamp]                 
+|                             
+6.60000V     0.00000A         NA    NA
+-59.6000mV   0.00000A         NA    NA
+-65.7334mV   0.00000A         NA    NA
+-79.4666mV   4.55888uA        NA    NA
+-98.6001mV   10.9104uA        NA    NA
+-119.200mV   10.9104uA        NA    NA
+-169.550mV   10.9104uA        NA    NA
+-199.800mV   17.1612uA        NA    NA
+-240.500mV   25.5714uA        NA    NA
+-321.300mV   25.5714uA        NA    NA
+-349.100mV   25.5714uA        NA    NA
+-359.400mV   50.3497uA        NA    NA
+-381.600mV   103.755uA        NA    NA
+-442.400mV   250.019uA        NA    NA
+-457.700mV   286.825uA        NA    NA
+-478.000mV   378.277uA        NA    NA
+-538.700mV   651.730uA        NA    NA
+-559.100mV   804.270uA        NA    NA
+-599.600mV   1.10711mA        NA    NA
+-640.100mV   1.40994mA        NA    NA
+-680.600mV   1.85544mA        NA    NA
+-700.700mV   2.18689mA        NA    NA
+-721.200mV   2.52494mA        NA    NA
+-761.600mV   4.07024mA        NA    NA
+-781.600mV   4.83523mA        NA    NA
+-862.400mV   12.3096mA        NA    NA
+-978.600mV   30.1466mA        NA    NA
+-1.03940V   41.7836mA         NA    NA
+-1.07970V   49.4971mA         NA    NA
+-1.16030V   64.9238mA         NA    NA
+-1.28220V   88.2554mA         NA    NA
+-3.30000V   474.461mA         NA    NA
+                    
+|                             
+|                             
+[End]        
+                           
+

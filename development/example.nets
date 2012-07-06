@@ -1,0 +1,1991 @@
+Netlist
+
+Exported from CS001.1.0.sch at 26/05/2007 10:26:17a
+
+EAGLE Version 4.16r2 Copyright (c) 1988-2006 CadSoft
+
+Net      Part     Pad      Pin        Sheet
+
+3.3V     C100     1        1          11
+         C103     2        2          13
+         C104     2        2          6
+         C109     2        2          7
+         C11      +        +          4
+         C110     2        2          7
+         C112     2        2          4
+         C113     2        2          12
+         C116     2        2          13
+         C117     2        2          12
+         C118     2        2          12
+         C121     2        2          12
+         C122     2        2          12
+         C123     2        2          7
+         C124     2        2          7
+         C125     2        2          7
+         C126     2        2          7
+         C127     2        2          12
+         C128     2        2          12
+         C130     2        2          12
+         C134     2        2          12
+         C135     2        2          7
+         C136     2        2          7
+         C137     2        2          7
+         C138     2        2          7
+         C139     2        2          7
+         C140     2        2          7
+         C144     2        2          4
+         C145     2        2          12
+         C147     2        2          12
+         C149     2        2          12
+         C151     2        2          12
+         C159     2        2          12
+         C160     2        2          7
+         C161     2        2          13
+         C163     2        2          4
+         C165     1        1          11
+         C168     2        2          8
+         C169     2        2          8
+         C170     2        2          8
+         C171     2        2          8
+         C172     2        2          8
+         C173     2        2          8
+         C174     2        2          8
+         C175     2        2          8
+         C176     2        2          10
+         C178     2        2          10
+         C179     2        2          10
+         C183     2        2          10
+         C184     2        2          10
+         C185     2        2          10
+         C188     2        2          10
+         C194     2        2          4
+         C199     2        2          10
+         C200     2        2          10
+         C201     2        2          10
+         C202     2        2          10
+         C204     2        2          10
+         C206     2        2          10
+         C207     2        2          10
+         C208     2        2          10
+         C209     2        2          10
+         C220     1        1          11
+         C221     2        2          13
+         C222     2        2          13
+         C227     2        2          10
+         C229     2        2          9
+         C230     2        2          13
+         C253     2        2          9
+         C255     2        2          5
+         C256     2        2          5
+         C8       +        +          13
+         C9       +        +          13
+         D1       A        A          11
+         D2       A        A          11
+         D3       A        A          11
+         D4       A        A          11
+         J4       4        TX_CT      7
+         L100     1        1          12
+         L101     1        1          4
+         L102     2        2          4
+         L103     1        1          10
+         L104     1        1          10
+         L6       2        2          13
+         LX1      1        1          5
+         M1       61       3.3V       4
+         M2       19       3.3V       4
+         M2       21       3.3V       4
+         R100     2        2          11
+         R101     2        2          11
+         R110     2        2          13
+         R112     2        2          6
+         R117     2        2          7
+         R118     2        2          7
+         R121     2        2          11
+         R125     2        2          12
+         R126     2        2          12
+         R128     1        1          7
+         R129     1        1          7
+         R131     2        2          7
+         R132     2        2          7
+         R137     2        2          7
+         R139     2        2          7
+         R140     2        2          12
+         R141     2        2          12
+         R142     2        2          12
+         R147     2        2          12
+         R148     2        2          12
+         R151     2        2          12
+         R157     2        2          7
+         R169     2        2          12
+         R170     2        2          12
+         R172     2        2          12
+         R173     2        2          12
+         R174     2        2          12
+         R175     2        2          12
+         R183     1        1          4
+         R212     2        2          10
+         R213     2        2          8
+         R214     2        2          8
+         R219     2        2          10
+         R224     2        2          9
+         R225     2        2          9
+         R226     2        2          9
+         R231     2        2          4
+         R232     2        2          8
+         R233     2        2          8
+         R234     2        2          11
+         R236     2        2          8
+         R239     2        2          10
+         R242     2        2          13
+         R251     2        2          6
+         R252     2        2          6
+         R253     2        2          6
+         R254     2        2          6
+         R257     2        2          11
+         R262     2        2          9
+         R264     2        2          11
+         R265     2        2          11
+         R267     2        2          9
+         R268     2        2          11
+         R269     2        2          11
+         R270     2        2          13
+         R277     2        2          9
+         R279     2        2          9
+         R285     2        2          5
+         R288     2        2          5
+         U1       14       3.3V       11
+         U11      D14      3.3V       10
+         U11      D15      3.3V       10
+         U11      D16      3.3V       10
+         U11      D7       3.3V       10
+         U11      D8       3.3V       10
+         U11      D9       3.3V       10
+         U11      E19      3.3V       10
+         U11      F19      3.3V       10
+         U11      G19      3.3V       10
+         U11      G4       3.3V       10
+         U11      H4       3.3V       10
+         U11      J4       3.3V       10
+         U11      N4       3.3V       10
+         U11      P19      3.3V       10
+         U11      P4       3.3V       10
+         U11      R19      3.3V       10
+         U11      R4       3.3V       10
+         U11      T19      3.3V       10
+         U11      T4       3.3V       10
+         U11      U19      3.3V       10
+         U11      W15      3.3V       10
+         U11      W16      3.3V       10
+         U11      W17      3.3V       10
+         U11      W6       3.3V       10
+         U11      W7       3.3V       10
+         U11      W8       3.3V       10
+         U12      1        3.3V       8
+         U12      14       3.3V       8
+         U12      27       3.3V       8
+         U12      3        3.3V       8
+         U12      43       3.3V       8
+         U12      49       3.3V       8
+         U12      9        3.3V       8
+         U13      1        3.3V       8
+         U13      14       3.3V       8
+         U13      27       3.3V       8
+         U13      3        3.3V       8
+         U13      43       3.3V       8
+         U13      49       3.3V       8
+         U13      9        3.3V       8
+         U15      2        VIN        13
+         U16      4        3.3V       11
+         U18      29       3.3V       9
+         U18      43       3.3V       9
+         U2       14       3.3V       4
+         U3       15       3.3V       6
+         U4       2        VIN        13
+         U5       10       3.3V       7
+         U5       13       3.3V       7
+         U5       27       3.3V       7
+         U5       36       3.3V       7
+         U5       49       3.3V       7
+         U5       52       3.3V       7
+         U5       59       3.3V       7
+         U5       60       3.3V       7
+         U5       73       3.3V       7
+         U5       79       3.3V       7
+         U5       80       3.3V       7
+         U6       107      3.3V       12
+         U6       118      3.3V       12
+         U6       12       3.3V       12
+         U6       134      3.3V       12
+         U6       145      3.3V       12
+         U6       156      3.3V       12
+         U6       171      3.3V       12
+         U6       20       3.3V       12
+         U6       31       3.3V       12
+         U6       45       3.3V       12
+         U6       57       3.3V       12
+         U6       6        3.3V       12
+         U6       71       3.3V       12
+         U6       93       3.3V       12
+         U8       8        3.3V       12
+         U9       14       3.3V       11
+         X1       4        3.3V       7
+
+3.3VA    C10      +        +          4
+         C196     2        2          4
+         L102     1        1          4
+         M2       9        3.3VA      4
+         R231     1        1          4
+
+3.3VAD   C154     2        2          4
+         C155     2        2          4
+         L101     2        2          4
+         R183     2        2          4
+         U7       1        3.3VAD     4
+
+5VA      C240     2        2          13
+         C244     2        2          5
+         C250     2        2          5
+         C254     2        2          13
+         C257     2        2          5
+         L105     2        2          13
+         R6       2        2          13
+         RX4      2        2          5
+         U17      25       5VA        5
+         U17      38       5VA        5
+         U17      43       5VA        5
+
+AC97_CLK C167     2        2          5
+         R283     1        1          5
+         U11      B5       ACBCLK     5
+
+AC97_DI  R281     1        1          5
+         U11      D6       ACDI       5
+
+AC97_DO  R177     2        2          5
+         R204     2        2          5
+         U17      5        SDATA_OUT  5
+
+AC97_RST_N R178     2        2          5
+         R205     2        2          5
+         R206     2        2          5
+         U17      11       RESET_N    5
+
+AC97_SYNC R180     2        2          5
+         R207     2        2          5
+         R208     2        2          5
+         U17      10       SYNC       5
+
+AU1000_PWR_EN R240     2        2          11
+         U15      1        EN         13
+
+BUS_ADR1 U11      Y1       ADR1       9
+         U18      31       ADR0       9
+
+BUS_ADR2 U11      V3       ADR2       9
+         U18      26       ADR1       9
+
+BUS_ADR3 U11      W2       ADR3       9
+         U18      25       ADR2       9
+
+BUS_ADR4 U11      U3       ADR4       9
+         U18      24       ADR3       9
+
+BUS_ADR5 U11      W1       ADR5       9
+         U18      23       ADR4       9
+
+BUS_ADR6 U11      V2       ADR6       9
+         U18      22       ADR5       9
+
+BUS_ADR7 U11      T3       ADR7       9
+         U18      21       ADR6       9
+
+BUS_ADR8 U11      V1       ADR8       9
+         U18      20       ADR7       9
+
+BUS_ADR9 U11      U2       ADR9       9
+         U18      10       ADR8       9
+
+BUS_ADR10 U11      R3       ADR10      9
+         U18      9        ADR9       9
+
+BUS_ADR11 U11      U1       ADR11      9
+         U18      8        ADR10      9
+
+BUS_ADR12 U11      T2       ADR12      9
+         U18      7        ADR11      9
+
+BUS_ADR13 U11      T1       ADR13      9
+         U18      6        ADR12      9
+
+BUS_ADR14 U11      R2       ADR14      9
+         U18      5        ADR13      9
+
+BUS_ADR15 U11      P3       ADR15      9
+         U18      4        ADR14      9
+
+BUS_ADR16 U11      R1       ADR16      9
+         U18      3        ADR15      9
+
+BUS_ADR17 U11      P2       ADR17      9
+         U18      54       ADR16      9
+
+BUS_ADR18 U11      N3       ADR18      9
+         U18      19       ADR17      9
+
+BUS_ADR19 U11      P1       ADR19      9
+         U18      18       ADR18      9
+
+BUS_ADR20 U11      N2       ADR20      9
+         U18      11       ADR19      9
+
+BUS_ADR21 U11      N1       ADR21      9
+         U18      12       ADR20      9
+
+BUS_ADR22 U11      M3       ADR22      9
+         U18      15       ADR21      9
+
+BUS_ADR23 U11      M1       ADR23      9
+         U18      2        ADR22      9
+
+BUS_ADR24 U11      M2       ADR24      9
+         U18      1        ADR23      9
+
+BUS_DATA0 U11      AA10     DATA0      9
+         U18      35       DATA0      9
+
+BUS_DATA1 U11      AB10     DATA1      9
+         U18      37       DATA1      9
+
+BUS_DATA2 U11      AB9      DATA2      9
+         U18      39       DATA2      9
+
+BUS_DATA3 U11      Y9       DATA3      9
+         U18      41       DATA3      9
+
+BUS_DATA4 U11      AA9      DATA4      9
+         U18      44       DATA4      9
+
+BUS_DATA5 U11      AB8      DATA5      9
+         U18      46       DATA5      9
+
+BUS_DATA6 U11      AA8      DATA6      9
+         U18      48       DATA6      9
+
+BUS_DATA7 U11      Y8       DATA7      9
+         U18      50       DATA7      9
+
+BUS_DATA8 U11      AB7      DATA8      9
+         U18      36       DATA8      9
+
+BUS_DATA9 U11      AA7      DATA9      9
+         U18      38       DATA9      9
+
+BUS_DATA10 U11      Y7       DATA10     9
+         U18      40       DATA10     9
+
+BUS_DATA11 U11      AB6      DATA11     9
+         U18      42       DATA11     9
+
+BUS_DATA12 U11      AA6      DATA12     9
+         U18      45       DATA12     9
+
+BUS_DATA13 U11      Y6       DATA13     9
+         U18      47       DATA13     9
+
+BUS_DATA14 U11      AB5      DATA14     9
+         U18      49       DATA14     9
+
+BUS_DATA15 U11      AA5      DATA15     9
+         U18      51       DATA15     9
+
+DSP97_CLK R144     1        1          12
+         R284     1        1          5
+         U6       76       RSCLK0     12
+
+DSP97_DI R282     1        1          5
+         U6       74       DR0PRI     12
+
+DSP97_DO R149     1        1          12
+         R177     1        1          5
+
+DSP97_RST_N R133     2        2          12
+         R178     1        1          5
+
+DSP97_SYNC R146     1        1          12
+         R180     1        1          5
+
+DSP_CLOCK R263     2        2          10
+         U6       10       CLKIN      12
+
+DSP_RST_N C166     2        2          11
+         R187     2        2          11
+         R188     2        2          11
+         U6       13       RESET_N    12
+
+FLASH_CS_N1 R220     2        2          9
+         R224     1        1          9
+         U18      32       CE_N       9
+
+FLASH_OE_N1 R221     2        2          9
+         R225     1        1          9
+         U18      34       OE_N       9
+
+FLASH_RST_N C158     2        2          11
+         R167     2        2          11
+         R168     2        2          11
+         U18      14       RESET_N    9
+
+FLASH_WE_N1 R222     2        2          9
+         R226     1        1          9
+         U18      13       WE_N       9
+
+GND      C1       1        1          4
+         C10      -        -          4
+         C100     2        2          11
+         C102     1        1          13
+         C103     1        1          13
+         C104     1        1          6
+         C107     1        1          6
+         C108     1        1          6
+         C109     1        1          7
+         C11      -        -          4
+         C110     1        1          7
+         C111     1        1          7
+         C112     1        1          4
+         C113     1        1          12
+         C114     1        1          13
+         C115     1        1          12
+         C116     1        1          13
+         C117     1        1          12
+         C118     1        1          12
+         C119     1        1          12
+         C120     1        1          12
+         C121     1        1          12
+         C122     1        1          12
+         C123     1        1          7
+         C124     1        1          7
+         C125     1        1          7
+         C126     1        1          7
+         C127     1        1          12
+         C128     1        1          12
+         C129     1        1          12
+         C130     1        1          12
+         C131     1        1          12
+         C132     1        1          12
+         C133     1        1          12
+         C134     1        1          12
+         C135     1        1          7
+         C136     1        1          7
+         C137     1        1          7
+         C138     1        1          7
+         C139     1        1          7
+         C140     1        1          7
+         C141     1        1          13
+         C142     1        1          13
+         C143     1        1          13
+         C144     1        1          4
+         C145     1        1          12
+         C146     1        1          12
+         C147     1        1          12
+         C148     1        1          12
+         C149     1        1          12
+         C150     1        1          12
+         C151     1        1          12
+         C152     1        1          4
+         C154     1        1          4
+         C155     1        1          4
+         C156     1        1          11
+         C157     1        1          11
+         C158     1        1          11
+         C159     1        1          12
+         C160     1        1          7
+         C161     1        1          13
+         C163     1        1          4
+         C164     1        1          11
+         C165     2        2          11
+         C166     1        1          11
+         C167     1        1          5
+         C168     1        1          8
+         C169     1        1          8
+         C170     1        1          8
+         C171     1        1          8
+         C172     1        1          8
+         C173     1        1          8
+         C174     1        1          8
+         C175     1        1          8
+         C176     1        1          10
+         C177     1        1          10
+         C178     1        1          10
+         C179     1        1          10
+         C180     1        1          10
+         C181     1        1          10
+         C182     1        1          10
+         C183     1        1          10
+         C184     1        1          10
+         C185     1        1          10
+         C186     1        1          10
+         C187     1        1          10
+         C188     1        1          10
+         C189     1        1          13
+         C191     1        1          13
+         C192     1        1          13
+         C193     1        1          13
+         C194     1        1          4
+         C195     1        1          4
+         C196     1        1          4
+         C197     1        1          10
+         C198     1        1          10
+         C199     1        1          10
+         C2       1        1          4
+         C200     1        1          10
+         C201     1        1          10
+         C202     1        1          10
+         C203     1        1          10
+         C204     1        1          10
+         C205     1        1          10
+         C206     1        1          10
+         C207     1        1          10
+         C208     1        1          10
+         C209     1        1          10
+         C211     1        1          13
+         C213     1        1          13
+         C214     1        1          4
+         C216     1        1          4
+         C218     1        1          11
+         C219     1        1          11
+         C220     2        2          11
+         C221     1        1          13
+         C222     1        1          13
+         C223     1        1          13
+         C224     1        1          13
+         C226     1        1          10
+         C227     1        1          10
+         C228     1        1          10
+         C229     1        1          9
+         C230     1        1          13
+         C233     1        1          13
+         C234     1        1          13
+         C235     1        1          13
+         C236     1        1          13
+         C238     1        1          13
+         C239     1        1          13
+         C240     1        1          13
+         C241     1        1          13
+         C242     1        1          5
+         C243     1        1          5
+         C244     1        1          5
+         C245     1        1          5
+         C246     1        1          5
+         C247     1        1          5
+         C249     1        1          5
+         C250     1        1          5
+         C252     1        1          5
+         C253     1        1          9
+         C254     1        1          13
+         C255     1        1          5
+         C256     1        1          5
+         C257     1        1          5
+         C258     1        1          5
+         C259     1        1          5
+         C3       1        1          4
+         C4       1        1          4
+         C5       1        1          13
+         C8       -        -          13
+         C9       -        -          13
+         D100     2        2          4
+         D101     2        2          4
+         D102     2        2          4
+         D103     2        2          4
+         D5       A        A          13
+         D6       3        +          4
+         D8       C        C          4
+         H1       P$1      P$1        3
+         H100     P$1      P$1        3
+         H2       P$1      P$1        3
+         H3       P$1      P$1        3
+         H4       P$1      P$1        3
+         H5       P$1      P$1        3
+         H6       P$1      P$1        3
+         H7       P$1      P$1        3
+         J3       2        SHIELD     13
+         J4       8        GND        7
+         J5       5        5          6
+         M1       26       GND        4
+         M1       41       GND        4
+         M1       63       GND        4
+         M2       18       GND        4
+         M2       20       GND        4
+         M2       8        GND        4
+         Q1       1        S          13
+         R102     1        1          11
+         R107     1        1          13
+         R109     1        1          13
+         R111     1        1          6
+         R114     1        1          6
+         R115     1        1          6
+         R120     1        1          11
+         R123     2        2          4
+         R124     2        2          4
+         R127     1        1          7
+         R130     1        1          7
+         R134     1        1          12
+         R135     1        1          12
+         R136     1        1          12
+         R138     1        1          7
+         R145     1        1          12
+         R150     1        1          12
+         R152     1        1          12
+         R153     1        1          12
+         R154     1        1          12
+         R156     1        1          7
+         R159     1        1          4
+         R162     1        1          4
+         R164     1        1          11
+         R165     1        1          11
+         R166     1        1          11
+         R168     1        1          11
+         R171     1        1          12
+         R181     1        1          4
+         R182     1        1          4
+         R185     1        1          11
+         R186     1        1          11
+         R187     1        1          11
+         R189     1        1          7
+         R190     1        1          7
+         R195     1        1          7
+         R197     1        1          7
+         R199     1        1          7
+         R205     1        1          5
+         R207     1        1          5
+         R210     1        1          6
+         R211     1        1          6
+         R223     1        1          10
+         R227     1        1          6
+         R228     1        1          6
+         R235     1        1          11
+         R238     1        1          10
+         R245     1        1          4
+         R250     1        1          4
+         R255     1        1          6
+         R256     1        1          11
+         R259     1        1          13
+         R261     1        1          10
+         R266     1        1          11
+         R272     1        1          13
+         R273     1        1          13
+         R274     1        1          13
+         R276     1        1          5
+         R280     1        1          9
+         R286     1        1          5
+         R287     1        1          5
+         S1       12       12         4
+         S2       A        A          11
+         S2       C        C          11
+         S2       D        D          11
+         U1       7        GND        11
+         U10      4        SYNC       13
+         U10      5        SGND       13
+         U10      9        PGND       13
+         U10      T-PAD    P-PAD      13
+         U11      AA21     GND        10
+         U11      J10      GND        10
+         U11      J11      GND        10
+         U11      J12      GND        10
+         U11      J13      GND        10
+         U11      J14      GND        10
+         U11      J9       GND        10
+         U11      K10      GND        10
+         U11      K11      GND        10
+         U11      K12      GND        10
+         U11      K13      GND        10
+         U11      K14      GND        10
+         U11      K9       GND        10
+         U11      L10      GND        10
+         U11      L11      GND        10
+         U11      L12      GND        10
+         U11      L13      GND        10
+         U11      L14      GND        10
+         U11      L9       GND        10
+         U11      M10      GND        10
+         U11      M11      GND        10
+         U11      M12      GND        10
+         U11      M13      GND        10
+         U11      M14      GND        10
+         U11      M9       GND        10
+         U11      N10      GND        10
+         U11      N11      GND        10
+         U11      N12      GND        10
+         U11      N13      GND        10
+         U11      N14      GND        10
+         U11      N9       GND        10
+         U11      P10      GND        10
+         U11      P11      GND        10
+         U11      P12      GND        10
+         U11      P13      GND        10
+         U11      P14      GND        10
+         U11      P9       GND        10
+         U11      Y19      GND        10
+         U12      12       GND        8
+         U12      28       GND        8
+         U12      41       GND        8
+         U12      46       GND        8
+         U12      52       GND        8
+         U12      54       GND        8
+         U12      6        GND        8
+         U13      12       GND        8
+         U13      28       GND        8
+         U13      41       GND        8
+         U13      46       GND        8
+         U13      52       GND        8
+         U13      54       GND        8
+         U13      6        GND        8
+         U14      2        GND        13
+         U15      3        GND        13
+         U15      6        GND        13
+         U16      1        GND        11
+         U16      2        GND        11
+         U17      26       GND        5
+         U17      4        GND        5
+         U17      40       GND        5
+         U17      44       GND        5
+         U17      7        GND        5
+         U18      33       GND        9
+         U18      52       GND        9
+         U2       7        GND        4
+         U3       14       GND        6
+         U4       3        GND        13
+         U4       6        GND        13
+         U5       11       GND        7
+         U5       12       GND        7
+         U5       28       GND        7
+         U5       35       GND        7
+         U5       4        GND        7
+         U5       50       GND        7
+         U5       51       GND        7
+         U5       65       GND        7
+         U5       71       GND        7
+         U5       76       GND        7
+         U6       1        GND        12
+         U6       106      GND        12
+         U6       117      GND        12
+         U6       128      GND        12
+         U6       129      GND        12
+         U6       130      GND        12
+         U6       131      GND        12
+         U6       132      GND        12
+         U6       133      GND        12
+         U6       144      GND        12
+         U6       15       GND        12
+         U6       155      GND        12
+         U6       170      GND        12
+         U6       174      GND        12
+         U6       175      GND        12
+         U6       176      GND        12
+         U6       19       GND        12
+         U6       2        GND        12
+         U6       3        GND        12
+         U6       30       GND        12
+         U6       39       GND        12
+         U6       40       GND        12
+         U6       41       GND        12
+         U6       42       GND        12
+         U6       43       GND        12
+         U6       44       GND        12
+         U6       56       GND        12
+         U6       7        GND        12
+         U6       70       GND        12
+         U6       8        GND        12
+         U6       88       GND        12
+         U6       89       GND        12
+         U6       9        GND        12
+         U6       90       GND        12
+         U6       91       GND        12
+         U6       92       GND        12
+         U6       97       GND        12
+         U7       8        GND        4
+         U8       4        GND        12
+         U9       7        GND        11
+         X1       2        GND        7
+         X2       2        GND        5
+         X2       3        GND        5
+         X3       2        GND        10
+         X3       3        GND        10
+         X4       2        GND        10
+         X4       3        GND        10
+
+GPIO0    U11      Y18      GPIO0      6
+
+GPIO1    U11      AA19     GPIO1      6
+
+GPIO2    U11      AB18     EXTCLK0/GPIO2 10
+
+GPIO4    U11      AB17     GPIO4      6
+
+GPIO5    U11      Y15      GPIO5      6
+
+GPIO6    R186     2        2          11
+         R241     1        1          6
+         U9       13       OE4        11
+
+GPIO7    R277     1        1          9
+         R278     2        2          9
+         U11      W13      GPIO7      9
+
+GPIO24   R123     1        1          4
+         R191     2        2          7
+         U2       12       A4         4
+         U2       2        A1         4
+         U2       5        A2         4
+         U2       9        A3         4
+
+GPIO25   M2       4        PD         4
+         R192     2        2          7
+
+GPIO26   M2       7        RM         4
+         R162     2        2          4
+         R193     2        2          7
+
+GPIO27   M2       16       F/R        4
+         R194     2        2          7
+
+GPIO28   C195     2        2          4
+         R230     2        2          4
+         U11      A19      N1TXD3/GPIO28 7
+
+GPIO29   R100     1        1          11
+         R209     2        2          6
+         U1       5        A2         11
+
+GPIO30   R101     1        1          11
+         R203     2        2          6
+         U1       2        A1         11
+
+GPIO31   R121     1        1          11
+         R202     2        2          6
+         U1       9        A3         11
+
+HIGHZ-TIP R160     2        2          4
+         U17      22       MIC2       5
+
+LINE_RING L2       2        2          4
+         M1       2        RING       4
+         S1       10       10         4
+
+LINE_TIP F2       2        2          4
+         M1       1        TIP        4
+         S1       3        3          4
+
+MAC0_CLK_25MHZ R179     2        2          7
+         U5       5        REFCLK     7
+
+MAC0_COL U11      B11      N0COL      7
+         U5       41       COL        7
+
+MAC0_CRS U11      C6       N0CRS      7
+         U5       42       CRS        7
+
+MAC0_INT R137     1        1          7
+         U5       43       INTR       7
+
+MAC0_LEDRX J4       11       LEDY_C     7
+         U5       46       LEDRX_N    7
+
+MAC0_LEDTX J4       10       LEDG_C     7
+         U5       47       LEDTX_N    7
+
+MAC0_MDC U11      B14      N0MDC      7
+         U5       22       MDC        7
+
+MAC0_MDIO R139     1        1          7
+         U11      A16      N0MDIO     7
+         U5       21       MDIO       7
+
+MAC0_RST_N C156     2        2          11
+         R163     2        2          11
+         R164     2        2          11
+         U5       8        RST_N      7
+
+MAC0_RX+ J4       3        RX+        7
+         R129     2        2          7
+         RX1      2        2          7
+         U5       64       RX+        7
+
+MAC0_RX- J4       6        RX-        7
+         R128     2        2          7
+         RX2      2        2          7
+         U5       63       RX-        7
+
+MAC0_RXD0 U11      B6       N0RXD0     7
+         U5       26       RXD0       7
+
+MAC0_RXD1 U11      A6       N0RXD1     7
+         U5       25       RXD1       7
+
+MAC0_RXD2 U11      A7       N0RXD2     7
+         U5       24       RXD2       7
+
+MAC0_RXD3 U11      C9       N0RXD3     7
+         U5       23       RXD3       7
+
+MAC0_RXDV U11      A10      N0RXDV     7
+         U5       29       RXDV       7
+
+MAC0_TX+ J4       1        TX+        7
+         R131     1        1          7
+         U5       77       TX+        7
+
+MAC0_TX- J4       2        TX-        7
+         R132     1        1          7
+         U5       78       TX-        7
+
+MAC0_TXD0 U11      C11      N0TXD0     7
+         U5       37       TXD0       7
+
+MAC0_TXD1 U11      B12      N0TXD1     7
+         U5       38       TXD1       7
+
+MAC0_TXD2 U11      C12      N0TXD2     7
+         U5       39       TXD2       7
+
+MAC0_TXD3 U11      A13      N0TXD3     7
+         U5       40       TXD3       7
+
+MAC0_TXEN U11      A11      N0TXEN     7
+         U5       34       TXEN       7
+
+MODEM_RST_N C164     2        2          11
+         M1       24       RESET_N    4
+         R184     2        2          11
+         R185     2        2          11
+
+N$1      R283     2        2          5
+         R284     2        2          5
+         U17      6        BIT_CLK    5
+
+N$2      C248     1        1          5
+         C251     2        2          5
+         U17      33       RX3D       5
+
+N$3      R142     1        1          12
+         U6       95       BMODE1     12
+
+N$4      S1       1        1          4
+         U2       11       Y4         4
+         U2       3        Y1         4
+         U2       6        Y2         4
+         U2       8        Y3         4
+
+N$5      C215     1        1          4
+         M2       15       VOUT       4
+
+N$6      C217     1        1          4
+         M2       13       VIN        4
+
+N$7      C1       2        2          4
+         D103     1        1          4
+         J1       3        3          4
+         L1       1        1          4
+
+N$8      M2       17       SHK        4
+         R230     1        1          4
+
+N$9      C2       2        2          4
+         D102     1        1          4
+         J1       2        2          4
+         L2       1        1          4
+
+N$10     D6       4        -          4
+         D8       A        A          4
+
+N$11     C3       2        2          4
+         D101     1        1          4
+         J2       3        3          4
+         L3       1        1          4
+
+N$12     C4       2        2          4
+         D100     1        1          4
+         J2       2        2          4
+         L4       1        1          4
+
+N$13     R196     1        1          6
+         U11      B15      U3DTR      6
+
+N$14     R198     1        1          6
+         U11      C13      U3RTS      6
+
+N$15     R200     1        1          6
+         U11      C10      U3TXD      6
+
+N$17     R158     1        1          7
+         U5       30       RXCLK      7
+
+N$18     R155     1        1          7
+         U5       33       TXCLK      7
+
+N$19     R155     2        2          7
+         U11      B4       N0TXCLK    7
+
+N$20     R158     2        2          7
+         U11      B10      N0RXCLK    7
+
+N$21     R269     1        1          11
+         U11      AA11     LWAIT_N    11
+
+N$22     R264     1        1          11
+         U11      AB15     PIOS16_N   11
+
+N$23     R265     1        1          11
+         U11      AA13     PWAIT_N    11
+
+N$25     F2       1        1          4
+         L1       2        2          4
+
+N$26     F3       1        1          4
+         L3       2        2          4
+
+N$27     C6       1        1          4
+         R161     1        1          4
+         U7       7        IN-        4
+
+N$28     C7       1        1          4
+         R161     2        2          4
+         U7       6        IN+        4
+
+N$29     C6       2        2          4
+         R2       2        2          4
+
+N$30     C7       2        2          4
+         R4       2        2          4
+
+N$31     R1       2        2          4
+         R2       1        1          4
+
+N$32     R3       2        2          4
+         R4       1        1          4
+
+N$33     R182     2        2          4
+         U7       3        LIN_N/CMP  4
+
+N$34     C153     1        1          4
+         U7       5        OUT+       4
+
+N$35     C162     1        1          4
+         U7       4        OUT-       4
+
+N$36     R266     2        2          11
+         R268     1        1          11
+         U11      W18      ROMSIZE    11
+
+N$37     R234     1        1          11
+         R235     2        2          11
+         U11      W19      ROMSEL     11
+
+N$38     R285     1        1          5
+         R286     2        2          5
+         U17      46       ID1_N      5
+
+N$39     R241     2        2          6
+         U11      W14      GPIO6      6
+
+N$40     R203     1        1          6
+         U11      B7       I2SCLK/GPIO30 6
+
+N$41     R209     1        1          6
+         U11      A4       I2SDIO/GPIO29 6
+
+N$42     R202     1        1          6
+         U11      B8       I2SWORD/GPIO31 6
+
+N$43     R191     1        1          7
+         U11      A18      N1TXEN/GPIO24 7
+
+N$44     R192     1        1          7
+         U11      B17      N1TXD0/GPIO25 7
+
+N$45     R193     1        1          7
+         U11      C17      N1TXD1/GPIO26 7
+
+N$46     R194     1        1          7
+         U11      C16      N1TXD2/GPIO27 7
+
+N$47     R112     1        1          6
+         U3       16       FORCEOFF_N 6
+
+N$48     R166     2        2          11
+         U9       1        OE1        11
+         U9       10       OE3        11
+         U9       4        OE2        11
+
+N$49     R124     1        1          4
+         U2       1        OE1        4
+         U2       10       OE3        4
+         U2       13       OE4        4
+         U2       4        OE2        4
+
+N$50     R184     1        1          11
+         U9       3        Y1         11
+
+N$51     R163     1        1          11
+         U9       6        Y2         11
+
+N$52     R167     1        1          11
+         U9       8        Y3         11
+
+N$53     R188     1        1          11
+         U9       11       Y4         11
+
+N$54     C105     2        2          6
+         U3       2        C1+        6
+
+N$55     C105     1        1          6
+         U3       4        C1-        6
+
+N$56     C106     2        2          6
+         U3       5        C2+        6
+
+N$57     C106     1        1          6
+         U3       6        C2-        6
+
+N$58     C107     2        2          6
+         U3       3        V+         6
+
+N$59     C108     2        2          6
+         U3       7        V-         6
+
+N$60     R176     1        1          6
+         U11      A8       U0TXD      6
+
+N$61     R111     2        2          6
+         U3       12       FORCEON    6
+
+N$62     R115     2        2          6
+         U3       1        EN_N       6
+
+N$63     C258     2        2          5
+         RX3      1        1          5
+         U17      2        XTL_IN     5
+         X2       1        T2         5
+
+N$64     R113     2        2          6
+         U3       9        ROUT       6
+
+N$65     C251     1        1          5
+         C252     2        2          5
+
+N$66     R237     1        1          11
+         U11      W22      ROUT_N     11
+
+N$67     R201     1        1          6
+         U11      B9       U1TXD/GPIO21 6
+
+N$68     C234     2        2          13
+         U10      3        BP5        13
+
+N$69     R102     2        2          11
+         U1       1        OE1        11
+         U1       10       OE3        11
+         U1       13       OE4        11
+         U1       4        OE2        11
+
+N$70     R240     1        1          11
+         U11      Y17      PWR_EN     11
+
+N$71     R276     2        2          5
+         U17      12       PC_BEEP    5
+         U17      13       PHONE_IN   5
+         U17      14       AUX_L      5
+         U17      15       AUX_R      5
+         U17      16       VIDEO_L    5
+         U17      17       VIDEO_R    5
+         U17      18       CD_L       5
+         U17      19       CD_GND     5
+         U17      20       CD_R       5
+         U17      23       LINE_IN_L  5
+         U17      24       LINE_IN_R  5
+
+N$72     R208     1        1          5
+         U11      A5       ACSYNC     5
+
+N$73     R204     1        1          5
+         U11      C8       ACDO       5
+
+N$74     R206     1        1          5
+         U11      C7       ACRST_N    5
+
+N$75     R281     2        2          5
+         R282     2        2          5
+         U17      8        SDATA_IN   5
+
+N$76     C259     2        2          5
+         RX3      2        2          5
+         U17      3        XTL_OUT    5
+         X2       4        T1         5
+
+N$77     C214     2        2          4
+         C215     2        2          4
+         R245     2        2          4
+         R246     1        1          4
+
+N$78     R145     2        2          12
+         U6       87       TDO        12
+
+N$79     C245     2        2          5
+         U17      29       AFILT1     5
+
+N$80     C246     2        2          5
+         U17      30       AFILT2     5
+
+N$81     C242     2        2          5
+         C243     2        2          5
+         RX4      1        1          5
+         U17      27       VREF       5
+
+N$82     C247     2        2          5
+         U17      32       FILT_L     5
+
+N$83     C249     2        2          5
+         U17      31       FILT_R     5
+
+N$84     C248     2        2          5
+         U17      34       CX3D       5
+
+N$85     C162     2        2          4
+         R181     2        2          4
+
+N$86     C152     2        2          4
+         C153     2        2          4
+         R159     2        2          4
+         R160     1        1          4
+
+N$87     R141     1        1          12
+         U6       96       BMODE0     12
+
+N$88     R151     1        1          12
+         U6       83       EMU_N      12
+
+N$89     C212     1        1          13
+         R243     1        1          13
+         U10      16       ILIM       13
+
+N$90     D5       C        C          13
+         F1       2        2          13
+         L5       1        1          13
+
+N$91     D7       A        A          13
+         L5       2        2          13
+
+N$92     C219     2        2          11
+         R256     2        2          11
+         R258     2        2          11
+         U11      AA20     RIN_N      11
+         U11      W21      VDDXOK     11
+
+N$93     C216     2        2          4
+         C217     2        2          4
+         R247     1        1          4
+         R248     2        2          4
+         R249     1        1          4
+
+N$94     C225     1        1          13
+         R259     2        2          13
+         R260     1        1          13
+         U15      5        FB         13
+
+N$98     D2       C        C          11
+         R103     2        2          11
+
+N$100    D1       C        C          11
+         R105     2        2          11
+
+N$101    D4       C        C          11
+         R122     2        2          11
+
+N$102    D3       C        C          11
+         R104     2        2          11
+
+N$104    C235     2        2          13
+         C239     2        2          13
+         L106     2        2          13
+         R5       2        2          13
+         U14      4        VIN        13
+
+N$105    C236     2        2          13
+         C237     2        2          13
+         C238     2        2          13
+         L105     1        1          13
+         R275     2        2          13
+         R6       1        1          13
+         U14      5        VOUT       13
+
+N$106    R103     1        1          11
+         U1       3        Y1         11
+
+N$107    R105     1        1          11
+         U1       6        Y2         11
+
+N$108    R104     1        1          11
+         U1       8        Y3         11
+
+N$109    R122     1        1          11
+         U1       11       Y4         11
+
+N$110    R120     2        2          11
+         U1       12       A4         11
+
+N$111    C237     1        1          13
+         R274     2        2          13
+         R275     1        1          13
+         U14      1        FB         13
+
+N$113    R138     2        2          7
+         U5       32       TXER       7
+
+N$114    R190     2        2          7
+         U11      B18      N1RXDV     7
+
+N$115    R195     2        2          7
+         U11      C15      N1RXCLK    7
+
+N$116    R199     2        2          7
+         U11      A12      N1TXCLK    7
+
+N$117    R197     2        2          7
+         U11      B13      N1CRS      7
+
+N$118    R189     2        2          7
+         U11      C18      N1COL      7
+
+N$122    R258     1        1          11
+         U16      3        RESET_N    11
+
+N$123    R130     2        2          7
+         U5       72       IBREF      7
+
+N$124    R127     2        2          7
+         U5       61       RPTR       7
+
+N$125    J4       12       LEDY_A     7
+         R119     1        1          7
+
+N$126    J4       9        LEDG_A     7
+         R116     1        1          7
+
+N$127    R156     2        2          7
+         R157     1        1          7
+         X1       1        OE         7
+
+N$128    R179     1        1          7
+         X1       3        OUT        7
+
+N$129    R215     1        1          8
+         R216     1        1          8
+         U11      K22      SCS0_N     8
+
+N$130    R217     1        1          8
+         R218     1        1          8
+         U11      K19      SCLK0      8
+
+N$131    R220     1        1          9
+         U11      G2       CS0_N      9
+
+N$132    R222     1        1          9
+         U11      H3       WE_N       9
+
+N$133    R221     1        1          9
+         U11      G1       OE_N       9
+
+N$134    R278     1        1          9
+         U18      17       RY/BY_N    9
+
+N$135    R279     1        1          9
+         R280     2        2          9
+         U18      16       WP_N       9
+
+N$136    R262     1        1          9
+         U18      53       BYTE_N     9
+
+N$137    R248     1        1          4
+         R250     2        2          4
+
+N$138    R267     1        1          9
+         U11      AB11     WAIT_N     9
+
+N$139    C218     2        2          11
+         R257     1        1          11
+         S2       B        B          11
+         U16      5        MR_N       11
+
+N$140    C190     2        2          13
+         L6       1        1          13
+         Q1       3        S          13
+         Q1       7        D          13
+         Q1       8        D          13
+         R229     2        2          13
+         U10      12       SW         13
+
+N$141    C211     2        2          13
+         U10      11       BP10       13
+
+N$142    C190     1        1          13
+         U10      14       BOOST      13
+
+N$143    Q1       4        G          13
+         U10      13       HDRV       13
+
+N$144    Q1       2        G          13
+         U10      10       LDRV       13
+
+N$145    U11      AB19     XTI12      10
+         X3       1        T2         10
+
+N$146    U11      AB21     XTI32      10
+         X4       1        T2         10
+
+N$147    U11      AB20     XTO12      10
+         X3       4        T1         10
+
+N$148    U11      AB22     XTO32      10
+         X4       4        T1         10
+
+N$149    C189     2        2          13
+         R229     1        1          13
+
+N$150    C101     1        1          13
+         R107     2        2          13
+         R108     1        1          13
+         U4       5        FB         13
+
+N$151    R244     1        1          13
+         U10      1        KFF        13
+
+N$152    R273     2        2          13
+         U10      2        RT         13
+
+N$153    C233     2        2          13
+         U10      6        SS/SD      13
+
+N$154    C210     2        2          13
+         C231     1        1          13
+         C232     2        2          13
+         R242     1        1          13
+         R272     2        2          13
+         U10      7        VFB        13
+
+N$155    C232     1        1          13
+         R271     2        2          13
+
+N$157    R109     2        2          13
+         R110     1        1          13
+         U4       1        EN         13
+
+N$158    R116     2        2          7
+         R117     1        1          7
+
+N$159    C231     2        2          13
+         R270     1        1          13
+
+N$160    R263     1        1          10
+         U11      AA17     EXTCLK1/GPIO3 10
+
+N$161    C210     1        1          13
+         R271     1        1          13
+         U10      8        COMP       13
+
+N$162    R149     2        2          12
+         U6       68       DT0PRI     12
+
+N$163    R118     1        1          7
+         R119     2        2          7
+
+N$171    RX1      1        1          7
+         RX2      1        1          7
+
+N$172    LX1      2        2          5
+         U17      1        3.3V       5
+         U17      9        3.3V       5
+
+N$174    R227     2        2          6
+         U11      E4       IRDARX     6
+
+N$175    R153     2        2          12
+         U6       73       DR0SEC     12
+
+N$176    R228     2        2          6
+         U11      F3       I2SDI      6
+
+N$178    R223     2        2          10
+         U11      E1       TDO        10
+
+N$179    R219     1        1          10
+         U11      D1       TDI        10
+
+N$180    R239     1        1          10
+         U11      W20      TMS        10
+
+N$181    R212     1        1          10
+         U11      C2       TCK        10
+
+N$182    R261     2        2          10
+         U11      AA15     TC3        10
+         U11      AA16     TC2        10
+         U11      AA18     TC0        10
+         U11      Y16      TC1        10
+         U11      Y21      TESTEN     10
+
+N$187    R238     2        2          10
+         U11      Y22      TRST_N     10
+
+N$188    R146     2        2          12
+         U6       75       RFS0       12
+
+N$189    R133     1        1          12
+         U6       27       PF15       12
+
+N$190    R144     2        2          12
+         U6       72       TSCLK0     12
+
+N$199    R143     2        2          12
+         U6       81       TX         12
+
+N$200    R126     1        1          12
+         U6       163      BR_N       12
+
+N$203    R174     1        1          12
+         U8       7        HOLD_N     12
+
+N$204    R170     1        1          12
+         R171     2        2          12
+         U8       3        WP_N       12
+
+N$205    R125     1        1          12
+         U6       162      ARDY       12
+
+N$206    R136     2        2          12
+         U6       21       PPI_CLK    12
+
+N$207    R154     2        2          12
+         U6       62       DR1SEC     12
+
+N$208    R152     2        2          12
+         U6       63       DR1PRI     12
+
+N$209    R135     2        2          12
+         U6       17       RTXI       12
+
+N$210    R140     1        1          12
+         U6       94       TCK        12
+
+N$211    R147     1        1          12
+         U6       86       TDI        12
+
+N$212    R148     1        1          12
+         U6       85       TMS        12
+
+N$213    R150     2        2          12
+         U6       84       TRST_N     12
+
+N$214    R134     2        2          12
+         U6       14       NMI        12
+
+N$215    R287     2        2          5
+         R288     1        1          5
+         U17      45       ID0_N      5
+
+N$217    R211     2        2          6
+         U11      A2       U2RXD      6
+
+N$218    J3       3        CONTACT    13
+         R106     1        1          13
+
+N$219    C5       2        2          13
+         F1       1        1          13
+         J3       1A       PIN        13
+         J3       1B       PIN        13
+         R106     2        2          13
+
+N0_RD_CT C111     2        2          7
+         J4       5        RX_CT      7
+
+PHONE_RING L4       2        2          4
+         R1       1        1          4
+         S1       9        9          4
+
+PHONE_TIP F3       2        2          4
+         R3       1        1          4
+         S1       4        4          4
+
+RS232_RX J5       3        3          6
+         U3       8        RIN        6
+
+RS232_TX J5       2        2          6
+         U3       13       DOUT       6
+
+RST_N    C157     2        2          11
+         R165     2        2          11
+         R237     2        2          11
+         U9       12       A4         11
+         U9       2        A1         11
+         U9       5        A2         11
+         U9       9        A3         11
+
+SDRAM_ADR0 U11      R22      SADR0      8
+         U12      23       ADR0       8
+         U13      23       ADR0       8
+
+SDRAM_ADR1 U11      R21      SADR1      8
+         U12      24       ADR1       8
+         U13      24       ADR1       8
+
+SDRAM_ADR2 U11      R20      SADR2      8
+         U12      25       ADR2       8
+         U13      25       ADR2       8
+
+SDRAM_ADR3 U11      T22      SADR3      8
+         U12      26       ADR3       8
+         U13      26       ADR3       8
+
+SDRAM_ADR4 U11      T21      SADR4      8
+         U12      29       ADR4       8
+         U13      29       ADR4       8
+
+SDRAM_ADR5 U11      T20      SADR5      8
+         U12      30       ADR5       8
+         U13      30       ADR5       8
+
+SDRAM_ADR6 U11      U22      SADR6      8
+         U12      31       ADR6       8
+         U13      31       ADR6       8
+
+SDRAM_ADR7 U11      U21      SADR7      8
+         U12      32       ADR7       8
+         U13      32       ADR7       8
+
+SDRAM_ADR8 U11      U20      SADR8      8
+         U12      33       ADR8       8
+         U13      33       ADR8       8
+
+SDRAM_ADR9 U11      V22      SADR9      8
+         U12      34       ADR9       8
+         U13      34       ADR9       8
+
+SDRAM_ADR10 U11      V21      SADR10     8
+         U12      22       ADR10      8
+         U13      22       ADR10      8
+
+SDRAM_ADR11 U11      V20      SADR11     8
+         U12      35       ADR11      8
+         U13      35       ADR11      8
+
+SDRAM_ADR12 U11      V19      SADR12     8
+         U12      36       ADR12      8
+         U13      36       ADR12      8
+
+SDRAM_BA0 U11      P21      SBA0       8
+         U12      20       BA0        8
+         U13      20       BA0        8
+
+SDRAM_BA1 U11      P20      SBA1       8
+         U12      21       BA1        8
+         U13      21       BA1        8
+
+SDRAM_CAS_N R214     1        1          8
+         U11      M20      SCAS_N     8
+         U12      17       CAS_N      8
+         U13      17       CAS_N      8
+
+SDRAM_CKE U11      M21      SCKE       8
+         U12      37       CKE        8
+         U13      37       CKE        8
+
+SDRAM_CLK0_0 R217     2        2          8
+         U12      38       CLK        8
+
+SDRAM_CLK0_1 R218     2        2          8
+         U13      38       CLK        8
+
+SDRAM_CS_N0_0 R216     2        2          8
+         R236     1        1          8
+         U12      19       CS_N       8
+
+SDRAM_CS_N0_1 R215     2        2          8
+         R233     1        1          8
+         U13      19       CS_N       8
+
+SDRAM_DATA0 U11      A20      SDATA0     8
+         U13      2        DATA0      8
+
+SDRAM_DATA1 U11      B20      SDATA1     8
+         U13      4        DATA1      8
+
+SDRAM_DATA2 U11      C20      SDATA2     8
+         U13      5        DATA2      8
+
+SDRAM_DATA3 U11      A21      SDATA3     8
+         U13      7        DATA3      8
+
+SDRAM_DATA4 U11      B21      SDATA4     8
+         U13      8        DATA4      8
+
+SDRAM_DATA5 U11      A22      SDATA5     8
+         U13      10       DATA5      8
+
+SDRAM_DATA6 U11      B22      SDATA6     8
+         U13      11       DATA6      8
+
+SDRAM_DATA7 U11      D19      SDATA7     8
+         U13      13       DATA7      8
+
+SDRAM_DATA8 U11      D18      SDATA8     8
+         U13      42       DATA8      8
+
+SDRAM_DATA9 U11      D17      SDATA9     8
+         U13      44       DATA9      8
+
+SDRAM_DATA10 U11      C21      SDATA10    8
+         U13      45       DATA10     8
+
+SDRAM_DATA11 U11      C22      SDATA11    8
+         U13      47       DATA11     8
+
+SDRAM_DATA12 U11      D20      SDATA12    8
+         U13      48       DATA12     8
+
+SDRAM_DATA13 U11      D21      SDATA13    8
+         U13      50       DATA13     8
+
+SDRAM_DATA14 U11      D22      SDATA14    8
+         U13      51       DATA14     8
+
+SDRAM_DATA15 U11      E20      SDATA15    8
+         U13      53       DATA15     8
+
+SDRAM_DATA16 U11      E21      SDATA16    8
+         U12      2        DATA0      8
+
+SDRAM_DATA17 U11      E22      SDATA17    8
+         U12      4        DATA1      8
+
+SDRAM_DATA18 U11      F20      SDATA18    8
+         U12      5        DATA2      8
+
+SDRAM_DATA19 U11      F21      SDATA19    8
+         U12      7        DATA3      8
+
+SDRAM_DATA20 U11      F22      SDATA20    8
+         U12      8        DATA4      8
+
+SDRAM_DATA21 U11      G20      SDATA21    8
+         U12      10       DATA5      8
+
+SDRAM_DATA22 U11      G21      SDATA22    8
+         U12      11       DATA6      8
+
+SDRAM_DATA23 U11      G22      SDATA23    8
+         U12      13       DATA7      8
+
+SDRAM_DATA24 U11      H20      SDATA24    8
+         U12      42       DATA8      8
+
+SDRAM_DATA25 U11      H21      SDATA25    8
+         U12      44       DATA9      8
+
+SDRAM_DATA26 U11      H22      SDATA26    8
+         U12      45       DATA10     8
+
+SDRAM_DATA27 U11      J20      SDATA27    8
+         U12      47       DATA11     8
+
+SDRAM_DATA28 U11      J21      SDATA28    8
+         U12      48       DATA12     8
+
+SDRAM_DATA29 U11      J22      SDATA29    8
+         U12      50       DATA13     8
+
+SDRAM_DATA30 U11      K20      SDATA30    8
+         U12      51       DATA14     8
+
+SDRAM_DATA31 U11      K21      SDATA31    8
+         U12      53       DATA15     8
+
+SDRAM_QM_N0 U11      N22      SQM0_N     8
+         U13      15       LDQM       8
+
+SDRAM_QM_N1 U11      N21      SQM1_N     8
+         U13      39       UDQM       8
+
+SDRAM_QM_N2 U11      N20      SQM2_N     8
+         U12      15       LDQM       8
+
+SDRAM_QM_N3 U11      P22      SQM3_N     8
+         U12      39       UDQM       8
+
+SDRAM_RAS_N R232     1        1          8
+         U11      M22      SRAS_N     8
+         U12      18       RAS_N      8
+         U13      18       RAS_N      8
+
+SDRAM_WE_N R213     1        1          8
+         U11      L22      SWE_N      8
+         U12      16       WE_N       8
+         U13      16       WE_N       8
+
+SLIC-VIN R247     2        2          4
+         R249     2        2          4
+         U17      37       MONO_OUT   5
+
+SLIC-VOUT R246     2        2          4
+         U17      21       MIC1       5
+
+SLIC_RING D6       2        ~          4
+         M2       2        RING       4
+         S1       8        8          4
+
+SLIC_TIP D6       1        ~          4
+         M2       1        TIP        4
+         S1       5        5          4
+
+SPI_CLK  R169     1        1          12
+         U11      A3       S0CLK      6
+         U6       53       SCLK       12
+         U8       1        CLOCK      12
+
+SPI_CS_N R175     1        1          12
+         U11      C4       S0DEN      6
+         U6       49       PF2        12
+         U8       6        CS_N       12
+
+SPI_DIN  R173     1        1          12
+         U11      A1       S0DOUT     6
+         U6       55       MOSI       12
+         U8       5        DIN        12
+
+SPI_DOUT R172     1        1          12
+         U11      F4       S0DIN      6
+         U6       54       MISO       12
+         U8       2        DOUT       12
+
+UART_CTS3 M1       38       CTS_N      4
+         R252     1        1          6
+         U11      E2       U3CTS      6
+
+UART_DCD3 M1       39       DCD_N      4
+         R251     1        1          6
+         U11      D2       U3DCD      6
+
+UART_DSR3 M1       37       DSR_N      4
+         R253     1        1          6
+         U11      E3       U3DSR      6
+
+UART_DTR3 M1       40       DTR_N      4
+         R196     2        2          6
+
+UART_RI3 M1       36       RI_N       4
+         R254     1        1          6
+         U11      C1       U3RI       6
+
+UART_RTS3 M1       33       RTS_N      4
+         R198     2        2          6
+
+UART_RX0 R113     1        1          6
+         R114     2        2          6
+         U11      D3       U0RXD      6
+
+UART_RX1 R143     1        1          12
+         R210     2        2          6
+         U11      B3       U1RXD      6
+
+UART_RX3 M1       34       RXD_N      4
+         R255     2        2          6
+         U11      D5       U3RXD      6
+
+UART_TX0 R176     2        2          6
+         U3       11       DIN        6
+
+UART_TX1 R201     2        2          6
+         U6       82       RX         12
+
+UART_TX3 M1       35       TXD_N      4
+         R200     2        2          6
+
+VCCI     C177     2        2          10
+         C180     2        2          10
+         C181     2        2          10
+         C182     2        2          10
+         C186     2        2          10
+         C187     2        2          10
+         C203     2        2          10
+         C205     2        2          10
+         C223     2        2          13
+         C224     2        2          13
+         C225     2        2          13
+         R260     2        2          13
+         U11      D10      VCCI       10
+         U11      D11      VCCI       10
+         U11      D12      VCCI       10
+         U11      D13      VCCI       10
+         U11      H19      VCCI       10
+         U11      J19      VCCI       10
+         U11      K4       VCCI       10
+         U11      L4       VCCI       10
+         U11      M4       VCCI       10
+         U11      N19      VCCI       10
+         U11      W11      VCCI       10
+         U11      W12      VCCI       10
+         U11      W9       VCCI       10
+         U15      4        VOUT       13
+
+VCCI_DSP C101     2        2          13
+         C102     2        2          13
+         C114     2        2          13
+         C115     2        2          12
+         C119     2        2          12
+         C120     2        2          12
+         C129     2        2          12
+         C132     2        2          12
+         C146     2        2          12
+         C148     2        2          12
+         C150     2        2          12
+         R108     2        2          13
+         U4       4        VOUT       13
+         U6       111      VCCI_DSP   12
+         U6       143      VCCI_DSP   12
+         U6       157      VCCI_DSP   12
+         U6       168      VCCI_DSP   12
+         U6       25       VCCI_DSP   12
+         U6       52       VCCI_DSP   12
+         U6       66       VCCI_DSP   12
+         U6       80       VCCI_DSP   12
+
+VCC_RTC  C131     2        2          12
+         C133     2        2          12
+         L100     2        2          12
+         U6       18       VCC_RTC    12
+
+VIN      C141     2        2          13
+         C142     2        2          13
+         C143     2        2          13
+         C191     2        2          13
+         C192     2        2          13
+         C193     2        2          13
+         C212     2        2          13
+         C213     2        2          13
+         C241     2        2          13
+         D7       C        C          13
+         L106     1        1          13
+         Q1       5        D          13
+         Q1       6        D          13
+         R243     2        2          13
+         R244     2        2          13
+         R5       1        1          13
+         U10      15       VIN        13
+
+XPWR12   C198     2        2          10
+         C228     2        2          10
+         L104     2        2          10
+         U11      Y20      XPWR12     10
+
+XPWR32   C197     2        2          10
+         C226     2        2          10
+         L103     2        2          10
+         U11      AA22     XPWR32     10
+

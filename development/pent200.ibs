@@ -1,0 +1,1592 @@
+|
+[IBIS Ver]     2.1
+[File name]    pent200.ibs
+[File Rev]     2.2
+[Date]         5/24/96
+[Source]       Intel Corp.
+|
+[Notes]
+1. Data for these models was extracted using a buffer/package model
+   combination (i.e. effects of the package on the VCC and VSS
+   connections to the buffer are accounted for in the model data).
+2. The maximum model represents a single output switching.  The minimum
+   model respresents multiple outputs switching.
+3. For meaningful simulation results, the target simulator
+   MUST provide support for non-linear output waveforms; i.e.
+   it must use the data in the [Falling waveform] tables.
+4. Refer to the accompanying README file for information regarding how
+   to properly model the package stub.  Lumped L, R and C values
+   should NOT be used.
+5. The min (slow corner) GTL+ I/V data has been adjusted to reflect the
+   0.6v @ 36ma max specification of the GTL+ bus, as stated in the
+   Pentium(R) Pro Processor Data Book.  This model represents only
+   the Pentium Pro Processor at 180/200Mhz.
+|
+|
+[Disclaimer]   Data is for modeling purposes only and is not guaranteed
+[Copyright]    Copyright 1996 by Intel Corp.
+|
+[Component]    Pentium(R)_Pro_Processor
+[Manufacturer] Intel Corp.
+[Package]
+|
+|           The Pentium Pro processor package stubs are NOT modeled
+|           using lumped L/R/C parameters.  Refer to the accompanying
+|           packaging files for information on package stub (pin)
+|           modeling.
+|
+|             typ   min   max
+R_pkg         0.0   0.0   0.0
+L_pkg         0.0   0.0   0.0
+C_pkg         0.0   0.0   0.0
+|
+[Pin]  signal_name    model_name
+A1     VREF0          NC
+A3     STPCLK#        CMOS_IN   
+A5     TCK            CMOS_IN   
+A7     TRST#          CMOS_IN   
+A9     IGNNE#         CMOS_IN   
+A11    A20M#          CMOS_IN   
+A13    TDI            CMOS_IN   
+A15    FLUSH#         CMOS_IN   
+A17    THERMTRIP#     CMOS_OUT  
+A19    BCLK           CLKBUFF
+A21    RESERVED       NC
+A23    TESTHI         NC        
+A25    TESTHI         NC        
+A27    D1#            GTL_I/O   
+A29    D3#            GTL_I/O   
+A31    D5#            GTL_I/O   
+A33    D8#            GTL_I/O   
+A35    D9#            GTL_I/O   
+A37    D14#           GTL_I/O   
+A39    D10#           GTL_I/O   
+A41    D11#           GTL_I/O   
+A43    D13#           GTL_I/O   
+A45    D16#           GTL_I/O   
+A47    VREF4          NC        
+B2     EMI            POWER       
+B4     VCCP           POWER       
+B6     VSS            GND       
+B8     VCCP           POWER       
+B12    VSS            GND       
+B16    VCCP           POWER       
+B20    VSS            GND       
+B24    VCCP           POWER       
+B28    VSS            GND       
+B32    VCCP           POWER       
+B36    VSS            GND       
+B40    VCCP           POWER       
+B42    VSS            GND       
+B44    VCCP           POWER       
+B46    EMI            POWER       
+C1     A35#           GTL_I/O   
+C3     IERR#          CMOS_OUT  
+C5     BERR#          GTL_I/O   
+C7     VREF1          NC        
+C9     FRCERR         GTL_I/O   
+C11    INIT#          CMOS_IN   
+C13    TDO            CMOS_OUT  
+C15    TMS            CMOS_IN   
+C17    FERR#          CMOS_OUT  
+C19    PLL1           NC        
+C21    TESTLO         NC        
+C23    PLL2           NC        
+C25    D0#            GTL_I/O   
+C27    D2#            GTL_I/O   
+C29    D4#            GTL_I/O   
+C31    D6#            GTL_I/O   
+C33    D7#            GTL_I/O   
+C35    D12#           GTL_I/O   
+C37    D15#           GTL_I/O   
+C39    D17#           GTL_I/O   
+C41    D20#           GTL_I/O   
+C43    D18#           GTL_I/O   
+C45    D19#           GTL_I/O   
+C47    D21#           GTL_I/O   
+E1     A29#           GTL_I/O   
+E3     A30#           GTL_I/O   
+E5     A32#           GTL_I/O   
+E7     A33#           GTL_I/O   
+E9     A34#           GTL_I/O   
+E39    D22#           GTL_I/O   
+E41    D23#           GTL_I/O   
+E43    D25#           GTL_I/O   
+E45    D24#           GTL_I/O   
+E47    D26#           GTL_I/O   
+F2     VCCP           POWER       
+F4     VSS            GND       
+F6     VCCP           POWER       
+F8     VSS            GND       
+F40    VSS            GND       
+F42    VCCP           POWER       
+F44    VSS            GND       
+F46    VCCP           POWER       
+G1     A22#           GTL_I/O   
+G3     A24#           GTL_I/O   
+G5     A27#           GTL_I/O   
+G7     A26#           GTL_I/O   
+G9     A31#           GTL_I/O   
+G39    D27#           GTL_I/O   
+G41    D29#           GTL_I/O   
+G43    D30#           GTL_I/O   
+G45    D28#           GTL_I/O   
+G47    D31#           GTL_I/O   
+J1     A19#           GTL_I/O   
+J3     A21#           GTL_I/O   
+J5     A20#           GTL_I/O   
+J7     A23#           GTL_I/O   
+J9     A28#           GTL_I/O   
+J39    D32#           GTL_I/O   
+J41    D35#           GTL_I/O   
+J43    D38#           GTL_I/O   
+J45    D33#           GTL_I/O   
+J47    D34#           GTL_I/O   
+K2     VSS            GND       
+K4     VCCP           POWER       
+K6     VSS            GND       
+K8     VSS            GND       
+K40    VSS            GND       
+K42    VSS            GND       
+K44    VCCP           POWER       
+K46    VSS            GND       
+L1     RESERVED       NC        
+L3     A16#           GTL_I/O   
+L5     A15#           GTL_I/O   
+L7     A18#           GTL_I/O   
+L9     A25#           GTL_I/O   
+L39    D37#           GTL_I/O   
+L41    D40#           GTL_I/O   
+L43    D43#           GTL_I/O   
+L45    D36#           GTL_I/O   
+L47    D39#           GTL_I/O   
+N1     A12#           GTL_I/O   
+N3     A14#           GTL_I/O   
+N5     A11#           GTL_I/O   
+N7     A13#           GTL_I/O   
+N9     A17#           GTL_I/O   
+N39    D44#           GTL_I/O   
+N41    D45#           GTL_I/O   
+N43    D47#           GTL_I/O   
+N45    D42#           GTL_I/O   
+N47    D41#           GTL_I/O   
+P2     VCCP           POWER       
+P4     VSS            GND       
+P6     VCCP           POWER       
+P8     VSS            GND       
+P40    VSS            GND       
+P42    VCCP           POWER       
+P44    VSS            GND       
+P46    VCCP           POWER       
+Q1     A9#            GTL_I/O   
+Q3     A7#            GTL_I/O   
+Q5     A5#            GTL_I/O   
+Q7     A8#            GTL_I/O   
+Q9     A10#           GTL_I/O   
+Q39    D51#           GTL_I/O   
+Q41    D52#           GTL_I/O   
+Q43    D49#           GTL_I/O   
+Q45    D48#           GTL_I/O   
+Q47    D46#           GTL_I/O   
+S1     A6#            GTL_I/O   
+S3     A4#            GTL_I/O   
+S5     A3#            GTL_I/O   
+S7     VREF2          NC        
+S9     AP1#           GTL_I/O   
+S39    D59#           GTL_I/O   
+S41    D57#           GTL_I/O   
+S43    D54#           GTL_I/O   
+S45    D53#           GTL_I/O   
+S47    D50#           GTL_I/O   
+T2     VSS            GND       
+T4     VCCP           POWER       
+T6     VSS            GND       
+T8     VSS            GND       
+T40    VSS            GND       
+T42    VSS            GND       
+T44    VCCP           POWER       
+T46    VSS            GND       
+U1     AP0#           GTL_I/O   
+U3     RSP#           GTL_IN    
+U5     BPRI#          GTL_IN    
+U7     BNR#           GTL_I/O   
+U9     BR3#           GTL_IN    
+U39    DEP7#          GTL_I/O   
+U41    VREF6          NC        
+U43    D60#           GTL_I/O   
+U45    D56#           GTL_I/O   
+U47    D55#           GTL_I/O   
+W1     SMI#           CMOS_IN   
+W3     BR1#           GTL_IN    
+W5     REQ4#          GTL_I/O   
+W7     REQ1#          GTL_I/O   
+W9     REQ0#          GTL_I/O   
+W39    DEP2#          GTL_I/O   
+W41    DEP4#          GTL_I/O   
+W43    D63#           GTL_I/O   
+W45    D61#           GTL_I/O   
+W47    D58#           GTL_I/O   
+X2     VSS            GND       
+X4     VSS            GND       
+X6     VCCP           POWER       
+X8     VSS            GND       
+X40    VSS            GND       
+X42    VCCP           POWER       
+X44    VSS            GND       
+X46    VSS            GND       
+Y1     REQ3#          GTL_I/O   
+Y3     REQ2#          GTL_I/O   
+Y5     DEFER#         GTL_IN    
+Y7     VREF3          NC        
+Y9     TRDY#          GTL_IN    
+Y39    PRDY#          GTL_OUT
+Y41    RESET#         GTL_IN    
+Y43    DEP1#          GTL_I/O   
+Y45    DEP6#          GTL_I/O   
+Y47    D62#           GTL_I/O   
+AA1    BR2#           GTL_IN    
+AA3    DRDY#          GTL_I/O   
+AA5    DBSY#          GTL_I/O   
+AA7    HITM#          GTL_I/O   
+AA9    LOCK#          GTL_I/O   
+AA39   BPM1#          GTL_I/O   
+AA41   PICD0#         CMOS_I/O  
+AA43   PICCLK         CMOS_IN   
+AA45   PREQ#          CMOS_IN   
+AA47   DEP5#          GTL_I/O   
+AB2    VSS            GND       
+AB4    VCCP           POWER       
+AB6    VSS            GND       
+AB8    VSS            GND       
+AB40   VSS            GND       
+AB42   VSS            GND       
+AB44   VCCP           POWER       
+AB46   VSS            GND       
+AC1    RESERVED       NC        
+AC3    HIT#           GTL_I/O   
+AC5    BR0#           GTL_I/O   
+AC7    RP#            GTL_I/O   
+AC9    RS0#           GTL_IN    
+AC39   BP3#           GTL_I/O   
+AC41   BPM0#          GTL_I/O   
+AC43   BINIT#         GTL_I/O   
+AC45   DEP0#          GTL_I/O   
+AC47   DEP3#          GTL_I/O   
+AE1    RESERVED       NC        
+AE3    ADS#           GTL_I/O   
+AE5    RS1#           GTL_IN    
+AE7    RS2#           GTL_IN    
+AE9    AERR#          GTL_I/O   
+AE39   TESTHI         NC
+AE41   PICD1#         CMOS_I/O  
+AE43   BP2#           GTL_I/O   
+AE45   RESERVED       NC        
+AE47   VREF5          NC        
+AF2    VSS            GND       
+AF4    VSS            GND       
+AF6    VSS            GND       
+AF8    VSS            GND       
+AF40   VSS            GND       
+AF42   VSS            GND       
+AF44   VSS            GND       
+AF46   VSS            GND       
+AG1    VCC5           NC        
+AG3    UP#            NC        
+AG5    RESERVED       NC        
+AG7    POWERGOOD      CMOS_IN
+AG9    RESERVED       NC        
+AG39   RESERVED       NC        
+AG41   LINT1/NMI      CMOS_IN   
+AG43   LINT0/INTR     CMOS_IN   
+AG45   VREF7          NC        
+AG47   RESERVED       NC        
+AJ1    VSS            GND       
+AJ3    VCCP           POWER       
+AJ5    VSS            GND       
+AJ7    VCCP           POWER       
+AJ9    VSS            GND       
+AJ39   VSS            GND       
+AJ41   VCCP           POWER       
+AJ43   VSS            GND       
+AJ45   VCCP           POWER       
+AJ47   VSS            GND       
+AL1    VCCP           POWER       
+AL3    VSS            GND       
+AL5    VCCP           POWER       
+AL7    VSS            GND       
+AL9    VCCP           POWER       
+AL39   VCCP           POWER       
+AL41   VSS            GND       
+AL43   VCCP           POWER       
+AL45   VSS            GND       
+AL47   VCCP           POWER       
+AN1    VSS            GND       
+AN3    VCCP           POWER       
+AN5    VSS            GND       
+AN7    VCCP           POWER       
+AN9    VSS            GND       
+AN39   VSS            GND       
+AN41   VCCP           POWER       
+AN43   VSS            GND       
+AN45   VCCP           POWER       
+AN47   VSS            GND       
+AQ1    VCCP           POWER       
+AQ3    VSS            GND       
+AQ5    VCCP           POWER       
+AQ7    VSS            GND       
+AQ9    VCCP           POWER       
+AQ39   VCCP           POWER       
+AQ41   VSS            GND       
+AQ43   VCCP           POWER       
+AQ45   VSS            GND       
+AQ47   VCCP           POWER       
+AS1    VID0           NC        
+AS3    VID1           NC        
+AS5    VID2           NC        
+AS7    VID3           NC        
+AS9    RESERVED       NC        
+AS39   TESTLO         NC        
+AS41   TESTLO         NC        
+AS43   TESTLO         NC        
+AS45   TESTLO         NC        
+AS47   RESERVED       NC        
+AU1    VCCS           POWER       
+AU3    VSS            GND       
+AU5    VCCS           POWER       
+AU7    VSS            GND       
+AU9    VCCS           POWER       
+AU39   VCCS           POWER       
+AU41   VSS            GND       
+AU43   VCCS           POWER       
+AU45   VSS            GND       
+AU47   VCCS           POWER       
+AW1    VSS            GND       
+AW3    VCCS           POWER       
+AW5    VSS            GND       
+AW7    VCCS           POWER       
+AW9    VSS            GND       
+AW39   VSS            GND       
+AW41   VCCS           POWER       
+AW43   VSS            GND       
+AW45   VCCS           POWER       
+AW47   VSS            GND       
+AY1    VCCS           POWER       
+AY3    VCCS           POWER       
+AY5    VCCS           POWER       
+AY7    VCCS           POWER       
+AY9    VCCS           POWER       
+AY39   VCCS           POWER       
+AY41   VCCS           POWER       
+AY43   VCCS           POWER       
+AY45   VCCS           POWER       
+AY47   VCCS           POWER       
+BA1    VSS            GND       
+BA3    VCCS           POWER       
+BA5    VSS            GND       
+BA7    VCCS           POWER       
+BA9    VSS            GND       
+BA11   RESERVED       NC        
+BA13   TESTLO         NC        
+BA15   TESTLO         NC        
+BA17   VCCP           POWER       
+BA19   VSS            GND       
+BA21   VCCP           POWER       
+BA23   VSS            GND       
+BA25   VCCP           POWER       
+BA27   VSS            GND       
+BA29   VCCP           POWER       
+BA31   VSS            GND       
+BA33   TESTLO         NC        
+BA35   RESERVED       NC        
+BA37   TESTLO         NC        
+BA39   VSS            GND       
+BA41   VCCS           POWER       
+BA43   VSS            GND       
+BA45   VCCS           POWER       
+BA47   VSS            GND       
+BC1    EMI            POWER       
+BC3    VSS            GND       
+BC5    VSS            GND       
+BC7    VSS            GND       
+BC9    VSS            GND       
+BC11   RESERVED       NC
+BC13   TESTLO         NC        
+BC15   TESTLO         NC        
+BC17   VSS            GND       
+BC19   VCCS           POWER       
+BC21   VSS            GND       
+BC23   VCCS           POWER       
+BC25   VSS            GND       
+BC27   VCCS           POWER       
+BC29   VSS            GND       
+BC31   VCCS           POWER       
+BC33   TESTLO         NC        
+BC35   RESERVED       NC        
+BC37   TESTLO         NC        
+BC39   VSS            GND       
+BC41   VSS            GND       
+BC43   VSS            GND       
+BC45   VSS            GND       
+BC47   EMI            POWER
+|
+|
+[Model]     GTL_I/O
+Model_type  I/O_open_drain
+Polarity    Inverting
+Enable      Active-Low
+Vinl = 0.8
+Vinh = 1.2
+Vmeas = 1.00
+Cref  = 0.00p
+Rref  = 25.00
+Vref  = 1.50
+|
+|Variable       typ    min    max
+C_comp          2.7p   2.5p   3.0p
+|
+|Variable       typ    min    max
+[Voltage range] 3.1    2.845  3.255
+|
+|Variable           typ    min    max
+[Temperature Range] 80     100     0 
+|
+|
+[Pulldown]
+|Volts    typ          min         max
+-1.10    -4.02e-02    -3.83e-02   -4.94E-02
+-1.00    -6.23e-02    -4.52e-02   -7.96E-02
+-0.90    -8.45e-02    -5.13e-02   -1.04E-01
+-0.80    -1.02e-01    -5.60e-02   -1.04E-01
+-0.70    -1.04e-01    -5.71e-02   -9.79E-02
+-0.60    -9.20e-02    -5.16e-02   -8.78E-02
+-0.50    -7.72e-02    -4.33e-02   -7.67E-02
+-0.40    -6.21e-02    -3.46e-02   -6.12E-02
+-0.30    -4.67e-02    -2.60e-02   -4.61E-02
+-0.20    -3.12e-02    -1.73e-02   -3.06E-02
+-0.10    -1.56e-02    -8.64e-03   -1.54E-02
++0.00    -0.00e+00    +0.00e+00   +0.00E+00
++0.10    +1.56e-02    +8.57e-03   +1.59E-02
++0.20    +3.09e-02    +1.70e-02   +3.19E-02
++0.30    +4.60e-02    +2.53e-02   +4.66E-02
++0.40    +6.08e-02    +3.35e-02   +6.10E-02
++0.50    +7.51e-02    +4.14e-02   +7.47E-02
++0.60    +8.90e-02    +4.91e-02   +8.80E-02
++0.70    +1.02e-01    +5.66e-02   +1.03E-01
++0.80    +1.15e-01    +6.38e-02   +1.16E-01
++0.90    +1.27e-01    +7.06e-02   +1.28E-01
++1.00    +1.39e-01    +7.70e-02   +1.40E-01
++1.10    +1.49e-01    +8.31e-02   +1.51E-01
++1.20    +1.59e-01    +8.87e-02   +1.61E-01
++1.30    +1.68e-01    +9.38e-02   +1.70E-01
++1.40    +1.77e-01    +9.84e-02   +1.78E-01
++1.50    +1.84e-01    +1.02e-01   +1.86E-01
++1.60    +1.90e-01    +1.06e-01   +1.93E-01
++1.70    +1.96e-01    +1.09e-01   +1.99E-01
++1.80    +2.01e-01    +1.11e-01   +2.04E-01
++1.90    +2.05e-01    +1.13e-01   +2.09E-01
++2.00    +2.08e-01    +1.14e-01   +2.13E-01
++2.10    +2.11e-01    +1.15e-01   +2.16E-01
++2.20    +2.12e-01    +1.15e-01   +2.18E-01
++2.30    +2.14e-01    +1.16e-01   +2.20E-01
++2.40    +2.14e-01    +1.17e-01   +2.21E-01
++2.50    +2.15e-01    +1.17e-01   +2.22E-01
++2.60    +2.16e-01    +1.18e-01   +2.24E-01
++2.70    +2.17e-01    +1.18e-01   +2.24E-01
++2.80    +2.18e-01    +1.18e-01   +2.24E-01
++2.90    +2.18e-01    +1.19e-01   +2.24E-01
++3.00    +2.19e-01    +1.19e-01   +2.24E-01
+|
+|
+[Pullup]
+|Volts    typ          min         max
++3.00    +0.00e+00    +0.00e+00   +0.00e+00
+-1.50    +0.00e+00    +0.00e+00   +0.00e+00
+|
+|
+[GND_clamp]
+|Volts    typ          min         max
+-1.10    -1.26e-01    -5.60e-02   -1.83E-01
+-1.00    -8.73e-02    -4.08e-02   -8.14E-02
+-0.90    -5.09e-02    -2.62e-02   -3.22E-02
+-0.80    -1.97e-02    -1.30e-02   -1.71E-02
+-0.70    -2.72e-03    -3.40e-03   -8.13E-03
+-0.60    -1.87e-04    -3.23e-04   -3.35E-03
+-0.50    -1.57e-05    -2.80e-05   -1.05E-03
+-0.40    -1.70e-06    -3.00e-06   +0.00E+00
+-0.30    +0.00e+00    +0.00e+00   +0.00E+00
+-0.20    +0.00e+00    +0.00e+00   +0.00E+00
+-0.10    +0.00e+00    +0.00e+00   +0.00E+00
++0.00    +0.00e+00    +0.00e+00   +0.00E+00
++3.10    +0.00e+00    +0.00e+00   +0.00e+00
+|
+|
+[POWER_clamp]
+|Volts    typ          min         max
++0.00    +0.00e+00    +0.00e+00   +0.00e+00
+-0.60    +0.00e+00    +0.00e+00   +0.00e+00
+|
+|
+[Ramp]
+|Variable    typ        min        max
+dV/dt_r      0.71/2.62n 0.61/3.59n 0.75/1.50n
+dV/dt_f      0.71/6.74n 0.61/6.53n 0.71/0.90n
+|
+|
+[Rising Waveform]
+R_fixture = 25
+V_fixture = 1.5
+C_fixture = 0.00pF
+|Time    Typ(v)   Min(v)   Max(v)
+0.00n     0.31    0.491    0.310
+0.02n       NA       NA    0.327
+0.04n    0.325       NA    0.349
+0.06n     0.34       NA    0.374
+0.08n     0.36       NA    0.399
+0.10n       NA       NA    0.416
+0.12n    0.412       NA    0.427
+0.14n    0.433       NA    0.434
+0.18n    0.458       NA    0.448
+0.20n       NA    0.523    0.455
+0.24n       NA    0.535    0.472
+0.28n       NA       NA    0.495
+0.36n    0.513       NA    0.546
+0.40n       NA    0.615    0.573
+0.42n       NA    0.624    0.587
+0.44n       NA       NA    0.601
+0.46n    0.557       NA    0.615
+0.48n       NA       NA    0.628
+0.62n    0.649       NA    0.691
+0.70n       NA       NA    0.726
+0.72n    0.695       NA    0.734
+0.74n       NA       NA    0.743
+0.80n       NA     0.68    0.769
+0.82n    0.731       NA    0.779
+1.06n       NA    0.733    0.929
+1.08n       NA       NA    0.942
+1.10n    0.813       NA    0.954
+1.18n       NA       NA    1.005
+1.22n    0.858       NA    1.028
+1.28n       NA       NA    1.058
+1.30n       NA    0.794    1.068
+1.46n    0.967       NA    1.146
+1.62n    1.029       NA    1.210
+1.66n       NA    0.871    1.226
+1.88n    1.115       NA    1.314
+1.90n       NA       NA    1.322
+1.92n       NA       NA    1.330
+2.04n       NA       NA    1.378
+2.16n    1.197       NA    1.421
+2.18n       NA    0.973    1.425
+2.20n       NA       NA    1.430
+2.50n       NA       NA    1.487
+2.78n     1.35       NA      1.5
+3.04n    1.405       NA      1.5
+3.30n    1.448       NA      1.5
+3.34n       NA    1.243      1.5
+3.56n    1.477       NA      1.5
+3.80n    1.492       NA      1.5
+3.86n       NA    1.348      1.5
+4.20n    1.499       NA      1.5
+4.32n       NA    1.423      1.5
+4.36n      1.5       NA      1.5
+4.66n      1.5    1.461      1.5
+4.98n      1.5    1.482      1.5
+5.98n      1.5      1.5      1.5
+|
+|
+[Falling Waveform]
+R_fixture = 25
+V_fixture = 1.5
+C_fixture = 0.00pF
+|Time    Typ(v)   Min(v)   Max(v)
+0.00n      1.5      1.5    1.500
+0.06n    1.492       NA    1.466
+0.12n    1.475       NA    1.440
+0.16n       NA       NA    1.422
+0.22n    1.436       NA    1.393
+0.24n       NA       NA    1.372
+0.34n       NA    1.452    1.295
+0.38n    1.362       NA    1.264
+0.42n       NA       NA    1.233
+0.52n    1.285       NA    1.155
+0.62n    1.218       NA    1.078
+0.74n       NA       NA    0.968
+0.76n    1.109       NA    0.948
+0.78n       NA       NA    0.928
+0.80n       NA    1.347    0.907
+0.82n       NA       NA    0.887
+0.86n       NA       NA    0.846
+0.90n       NA       NA    0.805
+0.98n       NA       NA    0.724
+1.04n       NA       NA    0.679
+1.06n    0.858       NA    0.668
+1.08n       NA       NA    0.656
+1.12n       NA    1.255    0.633
+1.18n       NA       NA    0.598
+1.24n    0.717       NA    0.564
+1.38n    0.615       NA    0.529
+1.40n       NA       NA    0.523
+1.42n       NA    1.161    0.520
+1.48n    0.554       NA    0.508
+1.56n    0.519       NA    0.493
+1.66n    0.488       NA    0.474
+1.72n       NA       NA    0.462
+1.80n    0.457       NA    0.447
+1.86n       NA    1.017    0.434
+2.04n    0.422       NA    0.395
+2.38n    0.392       NA    0.355
+2.40n       NA       NA    0.354
+2.44n       NA    0.842    0.351
+2.70n       NA    0.771    0.335
+2.86n    0.367       NA    0.325
+2.90n       NA    0.723    0.323
+3.12n       NA    0.683    0.310
+3.14n       NA       NA    0.310
+3.46n       NA    0.638    0.310
+3.62n    0.346       NA    0.310
+3.90n       NA    0.601    0.310
+4.48n       NA    0.571    0.310
+4.74n     0.33       NA    0.310
+5.22n       NA    0.546    0.310
+6.12n       NA    0.527    0.310
+6.98n    0.317       NA    0.310
+7.20n       NA    0.512    0.310
+10.88n       NA    0.491    0.310
+11.24n    0.311    0.491    0.310
+|
+|
+[Model]     GTL_OUT
+Model_type  Open_drain
+Polarity    Inverting
+Enable      Active-Low
+Vmeas = 1.00
+Cref  = 0.00p
+Rref  = 25.00
+Vref  = 1.50
+|
+|Variable       typ    min    max
+C_comp          2.7p   2.5p   3.0p
+|
+|Variable       typ    min    max
+[Voltage range] 3.1    2.845  3.255
+|
+|Variable           typ    min    max
+[Temperature Range] 80     100     0 
+|
+|
+[Pulldown]
+|Volts    typ          min         max
+-1.10    -4.02e-02    -3.83e-02   -4.94E-02
+-1.00    -6.23e-02    -4.52e-02   -7.96E-02
+-0.90    -8.45e-02    -5.13e-02   -1.04E-01
+-0.80    -1.02e-01    -5.60e-02   -1.04E-01
+-0.70    -1.04e-01    -5.71e-02   -9.79E-02
+-0.60    -9.20e-02    -5.16e-02   -8.78E-02
+-0.50    -7.72e-02    -4.33e-02   -7.67E-02
+-0.40    -6.21e-02    -3.46e-02   -6.12E-02
+-0.30    -4.67e-02    -2.60e-02   -4.61E-02
+-0.20    -3.12e-02    -1.73e-02   -3.06E-02
+-0.10    -1.56e-02    -8.64e-03   -1.54E-02
++0.00    -0.00e+00    +0.00e+00   +0.00E+00
++0.10    +1.56e-02    +8.57e-03   +1.59E-02
++0.20    +3.09e-02    +1.70e-02   +3.19E-02
++0.30    +4.60e-02    +2.53e-02   +4.66E-02
++0.40    +6.08e-02    +3.35e-02   +6.10E-02
++0.50    +7.51e-02    +4.14e-02   +7.47E-02
++0.60    +8.90e-02    +4.91e-02   +8.80E-02
++0.70    +1.02e-01    +5.66e-02   +1.03E-01
++0.80    +1.15e-01    +6.38e-02   +1.16E-01
++0.90    +1.27e-01    +7.06e-02   +1.28E-01
++1.00    +1.39e-01    +7.70e-02   +1.40E-01
++1.10    +1.49e-01    +8.31e-02   +1.51E-01
++1.20    +1.59e-01    +8.87e-02   +1.61E-01
++1.30    +1.68e-01    +9.38e-02   +1.70E-01
++1.40    +1.77e-01    +9.84e-02   +1.78E-01
++1.50    +1.84e-01    +1.02e-01   +1.86E-01
++1.60    +1.90e-01    +1.06e-01   +1.93E-01
++1.70    +1.96e-01    +1.09e-01   +1.99E-01
++1.80    +2.01e-01    +1.11e-01   +2.04E-01
++1.90    +2.05e-01    +1.13e-01   +2.09E-01
++2.00    +2.08e-01    +1.14e-01   +2.13E-01
++2.10    +2.11e-01    +1.15e-01   +2.16E-01
++2.20    +2.12e-01    +1.15e-01   +2.18E-01
++2.30    +2.14e-01    +1.16e-01   +2.20E-01
++2.40    +2.14e-01    +1.17e-01   +2.21E-01
++2.50    +2.15e-01    +1.17e-01   +2.22E-01
++2.60    +2.16e-01    +1.18e-01   +2.24E-01
++2.70    +2.17e-01    +1.18e-01   +2.24E-01
++2.80    +2.18e-01    +1.18e-01   +2.24E-01
++2.90    +2.18e-01    +1.19e-01   +2.24E-01
++3.00    +2.19e-01    +1.19e-01   +2.24E-01
+|
+|
+[Pullup]
+|Volts    typ          min         max
++3.00    +0.00e+00    +0.00e+00   +0.00e+00
+-1.50    +0.00e+00    +0.00e+00   +0.00e+00
+|
+|
+[GND_clamp]
+|Volts    typ          min         max
+-1.10    -1.26e-01    -5.60e-02   -1.83E-01
+-1.00    -8.73e-02    -4.08e-02   -8.14E-02
+-0.90    -5.09e-02    -2.62e-02   -3.22E-02
+-0.80    -1.97e-02    -1.30e-02   -1.71E-02
+-0.70    -2.72e-03    -3.40e-03   -8.13E-03
+-0.60    -1.87e-04    -3.23e-04   -3.35E-03
+-0.50    -1.57e-05    -2.80e-05   -1.05E-03
+-0.40    -1.70e-06    -3.00e-06   +0.00E+00
+-0.30    +0.00e+00    +0.00e+00   +0.00E+00
+-0.20    +0.00e+00    +0.00e+00   +0.00E+00
+-0.10    +0.00e+00    +0.00e+00   +0.00E+00
++0.00    +0.00e+00    +0.00e+00   +0.00E+00
++3.10    +0.00e+00    +0.00e+00   +0.00e+00
+|
+|
+[POWER_clamp]
+|Volts    typ          min         max
++0.00    +0.00e+00    +0.00e+00   +0.00e+00
+-0.60    +0.00e+00    +0.00e+00   +0.00e+00
+|
+|
+[Ramp]
+|Variable    typ        min        max
+dV/dt_r      0.71/2.62n 0.61/3.59n 0.75/1.50n
+dV/dt_f      0.71/6.74n 0.61/6.53n 0.71/0.90n
+|
+|
+[Rising Waveform]
+R_fixture = 25
+V_fixture = 1.5
+C_fixture = 0.00pF
+|Time    Typ(v)   Min(v)   Max(v)
+0.00n     0.31    0.491    0.310
+0.02n       NA       NA    0.327
+0.04n    0.325       NA    0.349
+0.06n     0.34       NA    0.374
+0.08n     0.36       NA    0.399
+0.10n       NA       NA    0.416
+0.12n    0.412       NA    0.427
+0.14n    0.433       NA    0.434
+0.18n    0.458       NA    0.448
+0.20n       NA    0.523    0.455
+0.24n       NA    0.535    0.472
+0.28n       NA       NA    0.495
+0.36n    0.513       NA    0.546
+0.40n       NA    0.615    0.573
+0.42n       NA    0.624    0.587
+0.44n       NA       NA    0.601
+0.46n    0.557       NA    0.615
+0.48n       NA       NA    0.628
+0.62n    0.649       NA    0.691
+0.70n       NA       NA    0.726
+0.72n    0.695       NA    0.734
+0.74n       NA       NA    0.743
+0.80n       NA     0.68    0.769
+0.82n    0.731       NA    0.779
+1.06n       NA    0.733    0.929
+1.08n       NA       NA    0.942
+1.10n    0.813       NA    0.954
+1.18n       NA       NA    1.005
+1.22n    0.858       NA    1.028
+1.28n       NA       NA    1.058
+1.30n       NA    0.794    1.068
+1.46n    0.967       NA    1.146
+1.62n    1.029       NA    1.210
+1.66n       NA    0.871    1.226
+1.88n    1.115       NA    1.314
+1.90n       NA       NA    1.322
+1.92n       NA       NA    1.330
+2.04n       NA       NA    1.378
+2.16n    1.197       NA    1.421
+2.18n       NA    0.973    1.425
+2.20n       NA       NA    1.430
+2.50n       NA       NA    1.487
+2.78n     1.35       NA      1.5
+3.04n    1.405       NA      1.5
+3.30n    1.448       NA      1.5
+3.34n       NA    1.243      1.5
+3.56n    1.477       NA      1.5
+3.80n    1.492       NA      1.5
+3.86n       NA    1.348      1.5
+4.20n    1.499       NA      1.5
+4.32n       NA    1.423      1.5
+4.36n      1.5       NA      1.5
+4.66n      1.5    1.461      1.5
+4.98n      1.5    1.482      1.5
+5.98n      1.5      1.5      1.5
+|
+|
+[Falling Waveform]
+R_fixture = 25
+V_fixture = 1.5
+C_fixture = 0.00pF
+|Time    Typ(v)   Min(v)   Max(v)
+0.00n      1.5      1.5    1.500
+0.06n    1.492       NA    1.466
+0.12n    1.475       NA    1.440
+0.16n       NA       NA    1.422
+0.22n    1.436       NA    1.393
+0.24n       NA       NA    1.372
+0.34n       NA    1.452    1.295
+0.38n    1.362       NA    1.264
+0.42n       NA       NA    1.233
+0.52n    1.285       NA    1.155
+0.62n    1.218       NA    1.078
+0.74n       NA       NA    0.968
+0.76n    1.109       NA    0.948
+0.78n       NA       NA    0.928
+0.80n       NA    1.347    0.907
+0.82n       NA       NA    0.887
+0.86n       NA       NA    0.846
+0.90n       NA       NA    0.805
+0.98n       NA       NA    0.724
+1.04n       NA       NA    0.679
+1.06n    0.858       NA    0.668
+1.08n       NA       NA    0.656
+1.12n       NA    1.255    0.633
+1.18n       NA       NA    0.598
+1.24n    0.717       NA    0.564
+1.38n    0.615       NA    0.529
+1.40n       NA       NA    0.523
+1.42n       NA    1.161    0.520
+1.48n    0.554       NA    0.508
+1.56n    0.519       NA    0.493
+1.66n    0.488       NA    0.474
+1.72n       NA       NA    0.462
+1.80n    0.457       NA    0.447
+1.86n       NA    1.017    0.434
+2.04n    0.422       NA    0.395
+2.38n    0.392       NA    0.355
+2.40n       NA       NA    0.354
+2.44n       NA    0.842    0.351
+2.70n       NA    0.771    0.335
+2.86n    0.367       NA    0.325
+2.90n       NA    0.723    0.323
+3.12n       NA    0.683    0.310
+3.14n       NA       NA    0.310
+3.46n       NA    0.638    0.310
+3.62n    0.346       NA    0.310
+3.90n       NA    0.601    0.310
+4.48n       NA    0.571    0.310
+4.74n     0.33       NA    0.310
+5.22n       NA    0.546    0.310
+6.12n       NA    0.527    0.310
+6.98n    0.317       NA    0.310
+7.20n       NA    0.512    0.310
+10.88n       NA    0.491    0.310
+11.24n    0.311    0.491    0.310
+|
+|
+[Model]     GTL_IN
+Model_type  Input
+Polarity    Inverting
+Enable      Active-Low
+Vinl = 0.8
+Vinh = 1.2
+|
+|Variable       typ    min    max
+C_comp          2.7p   2.5p   3.0p
+|
+|Variable       typ    min    max
+[Voltage range] 3.1    2.845  3.255
+|
+|Variable           typ    min    max
+[Temperature Range] 80     100    0 
+|
+|
+[GND_clamp]
+|Volts    typ          min         max
+-1.50    -2.89e-01    -1.20e-01   -3.23e-01
+-1.40    -2.47e-01    -1.03e-01   -2.70e-01
+-1.30    -2.06e-01    -8.74e-02   -2.17e-01
+-1.20    -1.66e-01    -7.16e-02   -1.65e-01
+-1.10    -1.26e-01    -5.60e-02   -1.15e-01
+-1.00    -8.73e-02    -4.08e-02   -6.62e-02
+-0.90    -5.09e-02    -2.62e-02   -2.39e-02
+-0.80    -1.97e-02    -1.30e-02   -2.14e-03
+-0.70    -2.72e-03    -3.40e-03   -1.34e-04
+-0.60    -1.87e-04    -3.23e-04   -8.10e-06
+-0.50    -1.57e-05    -2.80e-05   +0.00e+00
+-0.40    -1.70e-06    -3.00e-06   +0.00e+00
+-0.30    +0.00e+00    +0.00e+00   +0.00e+00
+-0.20    +0.00e+00    +0.00e+00   +0.00e+00
+-0.10    +0.00e+00    +0.00e+00   +0.00e+00
++0.00    +0.00e+00    +0.00e+00   +0.00e+00
++3.10    +0.00e+00    +0.00e+00   +0.00e+00
+|
+|
+[POWER_clamp]
+|Volts    typ          min         max
++0.00    +0.00e+00    +0.00e+00   +0.00e+00
+-0.60    +0.00e+00    +0.00e+00   +0.00e+00
+|
+|
+[Model]     CMOS_I/O
+Model_type  I/O_open_drain
+Polarity    Inverting
+Enable      Active-Low
+Vinl = 0.8
+Vinh = 2.0
+Vmeas = 1.50
+Cref  = 0.00p
+Rref  = 150.00
+Vref  = 3.30
+|
+|Variable       typ    min    max
+C_comp          2.6p   2.3p   2.8p
+|
+|Variable       typ    min    max
+[Voltage range] 3.1    2.845  3.255
+|
+|Variable           typ    min    max
+[Temperature Range] 80     100    0
+|
+|
+[Pulldown]
+|Volts    typ          min         max
+-1.50    -3.56e-03    -2.76e-03   -5.00e-03
+-1.40    -4.29e-03    -3.27e-03   -6.29e-03
+-1.30    -5.15e-03    -3.92e-03   -8.09e-03
+-1.20    -6.46e-03    -4.89e-03   -1.13e-02
+-1.10    -8.64e-03    -6.48e-03   -1.86e-02
+-1.00    -1.28e-02    -9.44e-03   -3.92e-02
+-0.90    -2.26e-02    -1.58e-02   -7.08e-02
+-0.80    -4.30e-02    -2.76e-02   -8.40e-02
+-0.70    -5.51e-02    -3.71e-02   -7.61e-02
+-0.60    -4.99e-02    -3.57e-02   -6.61e-02
+-0.50    -4.20e-02    -3.02e-02   -5.58e-02
+-0.40    -3.39e-02    -2.43e-02   -4.51e-02
+-0.30    -2.55e-02    -1.83e-02   -3.42e-02
+-0.20    -1.71e-02    -1.22e-02   -2.30e-02
+-0.10    -8.57e-03    -6.10e-03   -1.16e-02
++0.00    +0.00e+00    +0.00e+00   +0.00e+00
++0.10    +8.51e-03    +6.06e-03   +1.16e-02
++0.20    +1.69e-02    +1.20e-02   +2.28e-02
++0.30    +2.50e-02    +1.78e-02   +3.36e-02
++0.40    +3.29e-02    +2.35e-02   +4.40e-02
++0.50    +4.05e-02    +2.89e-02   +5.40e-02
++0.60    +4.76e-02    +3.40e-02   +6.33e-02
++0.70    +5.44e-02    +3.89e-02   +7.21e-02
++0.80    +6.07e-02    +4.34e-02   +8.03e-02
++0.90    +6.66e-02    +4.76e-02   +8.78e-02
++1.00    +7.19e-02    +5.14e-02   +9.46e-02
++1.10    +7.67e-02    +5.48e-02   +1.01e-01
++1.20    +8.09e-02    +5.78e-02   +1.06e-01
++1.30    +8.46e-02    +6.03e-02   +1.11e-01
++1.40    +8.78e-02    +6.25e-02   +1.15e-01
++1.50    +9.05e-02    +6.42e-02   +1.19e-01
++1.60    +9.26e-02    +6.54e-02   +1.21e-01
++1.70    +9.43e-02    +6.63e-02   +1.24e-01
++1.80    +9.54e-02    +6.68e-02   +1.25e-01
++1.90    +9.62e-02    +6.72e-02   +1.26e-01
++2.00    +9.66e-02    +6.75e-02   +1.27e-01
++2.10    +9.70e-02    +6.78e-02   +1.27e-01
++2.20    +9.74e-02    +6.81e-02   +1.28e-01
++2.30    +9.76e-02    +6.83e-02   +1.28e-01
++2.40    +9.79e-02    +6.85e-02   +1.28e-01
++2.50    +9.81e-02    +6.87e-02   +1.29e-01
++2.60    +9.84e-02    +6.89e-02   +1.29e-01
++2.70    +9.85e-02    +6.90e-02   +1.29e-01
++2.80    +9.87e-02    +6.91e-02   +1.29e-01
++2.90    +9.88e-02    +6.92e-02   +1.30e-01
++3.00    +9.89e-02    +6.93e-02   +1.30e-01
++3.10    +9.90e-02    +6.94e-02   +1.30e-01
++3.20    +9.91e-02    +6.94e-02   +1.30e-01
++3.30    +9.92e-02    +6.95e-02   +1.30e-01
++3.40    +9.93e-02    +6.95e-02   +1.30e-01
++3.50    +9.94e-02    +6.96e-02   +1.30e-01
++6.60    +9.94e-02    +6.96e-02   +1.30e-01
+|
+|
+[Pullup]
+|Volts    typ          min         max
++6.60    +0.00e+00    +0.00e+00   +0.00e+00
+-3.30    +0.00e+00    +0.00e+00   +0.00e+00
+|
+|
+[GND_clamp]
+|Volts    typ          min         max
+-1.50    -3.74e-01    -2.04e-01   -3.31e-01
+-1.40    -3.19e-01    -1.76e-01   -2.77e-01
+-1.30    -2.66e-01    -1.48e-01   -2.23e-01
+-1.20    -2.14e-01    -1.21e-01   -1.70e-01
+-1.10    -1.62e-01    -9.46e-02   -1.18e-01
+-1.00    -1.12e-01    -6.85e-02   -6.87e-02
+-0.90    -6.45e-02    -4.36e-02   -2.51e-02
+-0.80    -2.43e-02    -2.11e-02   -1.87e-03
+-0.70    -2.93e-03    -4.97e-03   -2.81e-05
+-0.60    -1.20e-04    -3.32e-04   +0.00e+00
+-0.50    -4.50e-06    -1.32e-05   +0.00e+00
+-0.40    +0.00e+00    +0.00e+00   +0.00e+00
+-0.30    +0.00e+00    +0.00e+00   +0.00e+00
+-0.20    +0.00e+00    +0.00e+00   +0.00e+00
+-0.10    +0.00e+00    +0.00e+00   +0.00e+00
++0.00    +0.00e+00    +0.00e+00   +0.00e+00
++3.30    +0.00e+00    +0.00e+00   +0.00e+00
+|
+|
+[POWER_clamp]
+|Volts    typ          min         max
++0.00    +0.00e+00    +0.00e+00   +0.00e+00
+-1.60    +0.00e+00    +0.00e+00   +0.00e+00
+-1.70    +1.20e-06    +2.80e-06   +0.00e+00
+-1.80    +3.28e-05    +6.21e-05   +0.00e+00
+-1.90    +8.35e-04    +1.22e-03   +5.36e-05
+-2.00    +1.17e-02    +1.02e-02   +2.99e-03
+-2.10    +4.45e-02    +2.89e-02   +2.88e-02
+-2.20    +8.84e-02    +5.19e-02   +7.22e-02
+-2.30    +1.36e-01    +7.66e-02   +1.21e-01
+-2.40    +1.87e-01    +1.02e-01   +1.72e-01
+-2.50    +2.38e-01    +1.28e-01   +2.24e-01
+-2.60    +2.90e-01    +1.55e-01   +2.76e-01
+-2.70    +3.42e-01    +1.82e-01   +3.29e-01
+-2.80    +3.95e-01    +2.09e-01   +3.83e-01
+-2.90    +4.49e-01    +2.36e-01   +4.36e-01
+-3.00    +5.02e-01    +2.63e-01   +4.90e-01
+-3.30    +6.61e-01    +3.44e-01   +6.52e-01
+|
+|
+[Ramp]
+|Variable    typ        min        max
+dV/dt_r      1.84/0.65n 1.77/0.65n 1.87/0.53n
+dV/dt_f      1.84/0.60n 1.77/0.75n 1.87/0.39n
+|
+|
+[Rising Waveform]
+R_fixture = 150
+V_fixture = 3.3
+C_fixture = 0.00pF
+|Time    Typ(v)   Min(v)   Max(v)
+0.00n    0.243    0.334    0.182
+0.35n    0.254       NA    0.192
+0.45n       NA    0.346       NA
+0.70n    0.276       NA    0.214
+0.85n       NA    0.367       NA
+0.90n       NA       NA    0.238
+0.95n    0.303       NA       NA
+1.05n       NA       NA    0.265
+1.15n    0.336       NA    0.291
+1.20n       NA    0.397    0.308
+1.25n       NA       NA    0.329
+1.30n    0.372       NA    0.355
+1.35n       NA       NA    0.388
+1.40n    0.404       NA    0.431
+1.45n       NA       NA    0.493
+1.50n    0.448    0.436    0.584
+1.55n    0.477       NA    0.709
+1.60n    0.511       NA    0.861
+1.65n    0.555       NA    1.032
+1.70n    0.613    0.474    1.216
+1.75n    0.692       NA    1.409
+1.80n    0.789       NA       NA
+1.85n    0.901    0.511    1.804
+1.90n    1.025       NA    1.991
+1.95n    1.157       NA    2.165
+2.00n    1.295    0.563    2.331
+2.05n       NA       NA     2.49
+2.10n       NA     0.61    2.632
+2.15n       NA     0.64    2.754
+2.20n    1.872    0.675    2.857
+2.25n       NA     0.72    2.942
+2.30n       NA    0.774    3.011
+2.35n    2.282    0.838    3.068
+2.40n    2.416    0.909    3.114
+2.45n     2.54    0.985    3.151
+2.50n    2.653    1.066     3.18
+2.55n    2.754       NA    3.204
+2.60n    2.842    1.238    3.223
+2.65n    2.919       NA       NA
+2.70n    2.986       NA     3.25
+2.75n    3.042    1.512       NA
+2.80n    3.091       NA    3.267
+2.85n    3.131       NA       NA
+2.90n    3.163       NA       NA
+2.95n     3.19       NA    3.283
+3.00n       NA     1.98       NA
+3.05n    3.228       NA       NA
+3.15n    3.252    2.275       NA
+3.20n       NA       NA    3.294
+3.25n       NA    2.461       NA
+3.30n    3.274    2.549       NA
+3.35n       NA    2.633       NA
+3.40n       NA    2.711       NA
+3.45n       NA    2.783       NA
+3.50n    3.288     2.85       NA
+3.55n       NA     2.91       NA
+3.60n       NA    2.964       NA
+3.65n       NA    3.012       NA
+3.70n       NA    3.055       NA
+3.80n       NA    3.125       NA
+3.85n       NA    3.155      3.3
+3.95n       NA    3.202      3.3
+4.00n    3.298       NA      3.3
+4.05n       NA    3.234      3.3
+4.20n       NA    3.263      3.3
+4.40n       NA    3.282      3.3
+4.50n      3.3       NA      3.3
+4.75n      3.3    3.294      3.3
+5.80n      3.3    3.299      3.3
+6.05n      3.3      3.3      3.3
+|
+|
+[Falling Waveform]
+R_fixture = 150
+V_fixture = 3.3
+C_fixture = 0.00pF
+|Time    Typ(v)   Min(v)   Max(v)
+0.00n      3.3      3.3      3.3
+0.05n    3.287    3.294    3.264
+0.10n    3.259    3.283    3.193
+0.15n    3.213    3.268    3.084
+0.20n    3.149    3.247    2.941
+0.25n    3.066     3.22    2.767
+0.30n    2.965    3.186    2.568
+0.35n    2.848    3.146    2.351
+0.40n    2.717    3.098    2.121
+0.45n    2.576    3.045       NA
+0.50n    2.425    2.986       NA
+0.55n    2.268       NA    1.403
+0.60n       NA    2.852    1.175
+0.65n    1.943       NA    0.961
+0.70n       NA    2.702    0.764
+0.75n       NA       NA    0.583
+0.80n    1.452    2.541    0.457
+0.85n    1.296       NA    0.386
+0.90n    1.147       NA    0.346
+0.95n    1.008    2.283    0.323
+1.00n    0.878       NA       NA
+1.05n    0.757       NA    0.294
+1.10n    0.647       NA       NA
+1.15n    0.566       NA       NA
+1.20n    0.511       NA    0.268
+1.25n    0.473    1.754       NA
+1.30n    0.446       NA       NA
+1.35n    0.426       NA       NA
+1.40n       NA      1.5    0.245
+1.45n    0.397       NA       NA
+1.50n       NA     1.34       NA
+1.60n    0.367     1.19       NA
+1.65n       NA       NA    0.226
+1.70n       NA    1.051       NA
+1.80n       NA    0.923       NA
+1.85n    0.334       NA       NA
+1.90n       NA    0.803       NA
+1.95n       NA    0.746       NA
+2.00n       NA    0.696       NA
+2.05n       NA    0.656       NA
+2.10n       NA    0.624       NA
+2.15n       NA    0.599       NA
+2.20n    0.305       NA    0.205
+2.25n       NA    0.563       NA
+2.40n       NA    0.526       NA
+2.60n       NA    0.492       NA
+2.70n    0.281       NA       NA
+2.85n       NA    0.461       NA
+3.10n       NA       NA    0.191
+3.20n       NA    0.431       NA
+3.50n    0.262       NA       NA
+3.70n       NA    0.402       NA
+4.35n       NA    0.379       NA
+4.90n    0.249       NA       NA
+5.20n       NA       NA    0.183
+5.25n       NA     0.36       NA
+6.20n       NA       NA    0.182
+6.80n       NA    0.345    0.182
+7.80n    0.243       NA    0.182
+8.50n    0.243    0.339    0.182
+9.00n    0.243    0.334    0.182
+|
+|
+[Model]     CMOS_OUT
+Model_type  Open_drain
+Polarity    Inverting
+Enable      Active-Low
+Vmeas = 1.50
+Cref  = 0.00p
+Rref  = 150.00
+Vref  = 3.30
+|
+|Variable       typ    min    max
+C_comp          2.6p   2.3p   2.8p
+|
+|Variable       typ    min    max
+[Voltage range] 3.1    2.845  3.255
+|
+|Variable           typ    min    max
+[Temperature Range] 80     100    0
+|
+|
+[Pulldown]
+|Volts    typ          min         max
+-1.50    -3.56e-03    -2.76e-03   -5.00e-03
+-1.40    -4.29e-03    -3.27e-03   -6.29e-03
+-1.30    -5.15e-03    -3.92e-03   -8.09e-03
+-1.20    -6.46e-03    -4.89e-03   -1.13e-02
+-1.10    -8.64e-03    -6.48e-03   -1.86e-02
+-1.00    -1.28e-02    -9.44e-03   -3.92e-02
+-0.90    -2.26e-02    -1.58e-02   -7.08e-02
+-0.80    -4.30e-02    -2.76e-02   -8.40e-02
+-0.70    -5.51e-02    -3.71e-02   -7.61e-02
+-0.60    -4.99e-02    -3.57e-02   -6.61e-02
+-0.50    -4.20e-02    -3.02e-02   -5.58e-02
+-0.40    -3.39e-02    -2.43e-02   -4.51e-02
+-0.30    -2.55e-02    -1.83e-02   -3.42e-02
+-0.20    -1.71e-02    -1.22e-02   -2.30e-02
+-0.10    -8.57e-03    -6.10e-03   -1.16e-02
++0.00    +0.00e+00    +0.00e+00   +0.00e+00
++0.10    +8.51e-03    +6.06e-03   +1.16e-02
++0.20    +1.69e-02    +1.20e-02   +2.28e-02
++0.30    +2.50e-02    +1.78e-02   +3.36e-02
++0.40    +3.29e-02    +2.35e-02   +4.40e-02
++0.50    +4.05e-02    +2.89e-02   +5.40e-02
++0.60    +4.76e-02    +3.40e-02   +6.33e-02
++0.70    +5.44e-02    +3.89e-02   +7.21e-02
++0.80    +6.07e-02    +4.34e-02   +8.03e-02
++0.90    +6.66e-02    +4.76e-02   +8.78e-02
++1.00    +7.19e-02    +5.14e-02   +9.46e-02
++1.10    +7.67e-02    +5.48e-02   +1.01e-01
++1.20    +8.09e-02    +5.78e-02   +1.06e-01
++1.30    +8.46e-02    +6.03e-02   +1.11e-01
++1.40    +8.78e-02    +6.25e-02   +1.15e-01
++1.50    +9.05e-02    +6.42e-02   +1.19e-01
++1.60    +9.26e-02    +6.54e-02   +1.21e-01
++1.70    +9.43e-02    +6.63e-02   +1.24e-01
++1.80    +9.54e-02    +6.68e-02   +1.25e-01
++1.90    +9.62e-02    +6.72e-02   +1.26e-01
++2.00    +9.66e-02    +6.75e-02   +1.27e-01
++2.10    +9.70e-02    +6.78e-02   +1.27e-01
++2.20    +9.74e-02    +6.81e-02   +1.28e-01
++2.30    +9.76e-02    +6.83e-02   +1.28e-01
++2.40    +9.79e-02    +6.85e-02   +1.28e-01
++2.50    +9.81e-02    +6.87e-02   +1.29e-01
++2.60    +9.84e-02    +6.89e-02   +1.29e-01
++2.70    +9.85e-02    +6.90e-02   +1.29e-01
++2.80    +9.87e-02    +6.91e-02   +1.29e-01
++2.90    +9.88e-02    +6.92e-02   +1.30e-01
++3.00    +9.89e-02    +6.93e-02   +1.30e-01
++3.10    +9.90e-02    +6.94e-02   +1.30e-01
++3.20    +9.91e-02    +6.94e-02   +1.30e-01
++3.30    +9.92e-02    +6.95e-02   +1.30e-01
++3.40    +9.93e-02    +6.95e-02   +1.30e-01
++3.50    +9.94e-02    +6.96e-02   +1.30e-01
++6.60    +9.94e-02    +6.96e-02   +1.30e-01
+|
+|
+[Pullup]
+|Volts    typ          min         max
++6.60    +0.00e+00    +0.00e+00   +0.00e+00
+-3.30    +0.00e+00    +0.00e+00   +0.00e+00
+|
+|
+[GND_clamp]
+|Volts    typ          min         max
+-1.50    -3.74e-01    -2.04e-01   -3.31e-01
+-1.40    -3.19e-01    -1.76e-01   -2.77e-01
+-1.30    -2.66e-01    -1.48e-01   -2.23e-01
+-1.20    -2.14e-01    -1.21e-01   -1.70e-01
+-1.10    -1.62e-01    -9.46e-02   -1.18e-01
+-1.00    -1.12e-01    -6.85e-02   -6.87e-02
+-0.90    -6.45e-02    -4.36e-02   -2.51e-02
+-0.80    -2.43e-02    -2.11e-02   -1.87e-03
+-0.70    -2.93e-03    -4.97e-03   -2.81e-05
+-0.60    -1.20e-04    -3.32e-04   +0.00e+00
+-0.50    -4.50e-06    -1.32e-05   +0.00e+00
+-0.40    +0.00e+00    +0.00e+00   +0.00e+00
+-0.30    +0.00e+00    +0.00e+00   +0.00e+00
+-0.20    +0.00e+00    +0.00e+00   +0.00e+00
+-0.10    +0.00e+00    +0.00e+00   +0.00e+00
++0.00    +0.00e+00    +0.00e+00   +0.00e+00
++3.30    +0.00e+00    +0.00e+00   +0.00e+00
+|
+|
+[POWER_clamp]
+|Volts    typ          min         max
++0.00    +0.00e+00    +0.00e+00   +0.00e+00
+-1.60    +0.00e+00    +0.00e+00   +0.00e+00
+-1.70    +1.20e-06    +2.80e-06   +0.00e+00
+-1.80    +3.28e-05    +6.21e-05   +0.00e+00
+-1.90    +8.35e-04    +1.22e-03   +5.36e-05
+-2.00    +1.17e-02    +1.02e-02   +2.99e-03
+-2.10    +4.45e-02    +2.89e-02   +2.88e-02
+-2.20    +8.84e-02    +5.19e-02   +7.22e-02
+-2.30    +1.36e-01    +7.66e-02   +1.21e-01
+-2.40    +1.87e-01    +1.02e-01   +1.72e-01
+-2.50    +2.38e-01    +1.28e-01   +2.24e-01
+-2.60    +2.90e-01    +1.55e-01   +2.76e-01
+-2.70    +3.42e-01    +1.82e-01   +3.29e-01
+-2.80    +3.95e-01    +2.09e-01   +3.83e-01
+-2.90    +4.49e-01    +2.36e-01   +4.36e-01
+-3.00    +5.02e-01    +2.63e-01   +4.90e-01
+-3.30    +6.61e-01    +3.44e-01   +6.52e-01
+|
+|
+[Ramp]
+|Variable    typ        min        max
+dV/dt_r      1.84/0.65n 1.77/0.65n 1.87/0.53n
+dV/dt_f      1.84/0.60n 1.77/0.75n 1.87/0.39n
+|
+|
+[Rising Waveform]
+R_fixture = 150
+V_fixture = 3.3
+C_fixture = 0.00pF
+|Time    Typ(v)   Min(v)   Max(v)
+0.00n    0.243    0.334    0.182
+0.35n    0.254       NA    0.192
+0.45n       NA    0.346       NA
+0.70n    0.276       NA    0.214
+0.85n       NA    0.367       NA
+0.90n       NA       NA    0.238
+0.95n    0.303       NA       NA
+1.05n       NA       NA    0.265
+1.15n    0.336       NA    0.291
+1.20n       NA    0.397    0.308
+1.25n       NA       NA    0.329
+1.30n    0.372       NA    0.355
+1.35n       NA       NA    0.388
+1.40n    0.404       NA    0.431
+1.45n       NA       NA    0.493
+1.50n    0.448    0.436    0.584
+1.55n    0.477       NA    0.709
+1.60n    0.511       NA    0.861
+1.65n    0.555       NA    1.032
+1.70n    0.613    0.474    1.216
+1.75n    0.692       NA    1.409
+1.80n    0.789       NA       NA
+1.85n    0.901    0.511    1.804
+1.90n    1.025       NA    1.991
+1.95n    1.157       NA    2.165
+2.00n    1.295    0.563    2.331
+2.05n       NA       NA     2.49
+2.10n       NA     0.61    2.632
+2.15n       NA     0.64    2.754
+2.20n    1.872    0.675    2.857
+2.25n       NA     0.72    2.942
+2.30n       NA    0.774    3.011
+2.35n    2.282    0.838    3.068
+2.40n    2.416    0.909    3.114
+2.45n     2.54    0.985    3.151
+2.50n    2.653    1.066     3.18
+2.55n    2.754       NA    3.204
+2.60n    2.842    1.238    3.223
+2.65n    2.919       NA       NA
+2.70n    2.986       NA     3.25
+2.75n    3.042    1.512       NA
+2.80n    3.091       NA    3.267
+2.85n    3.131       NA       NA
+2.90n    3.163       NA       NA
+2.95n     3.19       NA    3.283
+3.00n       NA     1.98       NA
+3.05n    3.228       NA       NA
+3.15n    3.252    2.275       NA
+3.20n       NA       NA    3.294
+3.25n       NA    2.461       NA
+3.30n    3.274    2.549       NA
+3.35n       NA    2.633       NA
+3.40n       NA    2.711       NA
+3.45n       NA    2.783       NA
+3.50n    3.288     2.85       NA
+3.55n       NA     2.91       NA
+3.60n       NA    2.964       NA
+3.65n       NA    3.012       NA
+3.70n       NA    3.055       NA
+3.80n       NA    3.125       NA
+3.85n       NA    3.155      3.3
+3.95n       NA    3.202      3.3
+4.00n    3.298       NA      3.3
+4.05n       NA    3.234      3.3
+4.20n       NA    3.263      3.3
+4.40n       NA    3.282      3.3
+4.50n      3.3       NA      3.3
+4.75n      3.3    3.294      3.3
+5.80n      3.3    3.299      3.3
+6.05n      3.3      3.3      3.3
+|
+|
+[Falling Waveform]
+R_fixture = 150
+V_fixture = 3.3
+C_fixture = 0.00pF
+|Time    Typ(v)   Min(v)   Max(v)
+0.00n      3.3      3.3      3.3
+0.05n    3.287    3.294    3.264
+0.10n    3.259    3.283    3.193
+0.15n    3.213    3.268    3.084
+0.20n    3.149    3.247    2.941
+0.25n    3.066     3.22    2.767
+0.30n    2.965    3.186    2.568
+0.35n    2.848    3.146    2.351
+0.40n    2.717    3.098    2.121
+0.45n    2.576    3.045       NA
+0.50n    2.425    2.986       NA
+0.55n    2.268       NA    1.403
+0.60n       NA    2.852    1.175
+0.65n    1.943       NA    0.961
+0.70n       NA    2.702    0.764
+0.75n       NA       NA    0.583
+0.80n    1.452    2.541    0.457
+0.85n    1.296       NA    0.386
+0.90n    1.147       NA    0.346
+0.95n    1.008    2.283    0.323
+1.00n    0.878       NA       NA
+1.05n    0.757       NA    0.294
+1.10n    0.647       NA       NA
+1.15n    0.566       NA       NA
+1.20n    0.511       NA    0.268
+1.25n    0.473    1.754       NA
+1.30n    0.446       NA       NA
+1.35n    0.426       NA       NA
+1.40n       NA      1.5    0.245
+1.45n    0.397       NA       NA
+1.50n       NA     1.34       NA
+1.60n    0.367     1.19       NA
+1.65n       NA       NA    0.226
+1.70n       NA    1.051       NA
+1.80n       NA    0.923       NA
+1.85n    0.334       NA       NA
+1.90n       NA    0.803       NA
+1.95n       NA    0.746       NA
+2.00n       NA    0.696       NA
+2.05n       NA    0.656       NA
+2.10n       NA    0.624       NA
+2.15n       NA    0.599       NA
+2.20n    0.305       NA    0.205
+2.25n       NA    0.563       NA
+2.40n       NA    0.526       NA
+2.60n       NA    0.492       NA
+2.70n    0.281       NA       NA
+2.85n       NA    0.461       NA
+3.10n       NA       NA    0.191
+3.20n       NA    0.431       NA
+3.50n    0.262       NA       NA
+3.70n       NA    0.402       NA
+4.35n       NA    0.379       NA
+4.90n    0.249       NA       NA
+5.20n       NA       NA    0.183
+5.25n       NA     0.36       NA
+6.20n       NA       NA    0.182
+6.80n       NA    0.345    0.182
+7.80n    0.243       NA    0.182
+8.50n    0.243    0.339    0.182
+9.00n    0.243    0.334    0.182
+|
+|
+[Model]     CMOS_IN
+Model_type  Input
+Vinl = 0.8
+Vinh = 2.0
+|
+|Variable       typ    min    max
+C_comp          2.6p   2.3p   2.8p
+|
+|Variable       typ    min    max
+[Voltage range] 3.1    2.845  3.255
+|
+|Variable           typ    min    max
+[Temperature Range] 80     100    0
+|
+|
+[GND_clamp]
+|Volts    typ          min         max
+-1.50    -3.74e-01    -2.04e-01   -3.31e-01
+-1.40    -3.19e-01    -1.76e-01   -2.77e-01
+-1.30    -2.66e-01    -1.48e-01   -2.23e-01
+-1.20    -2.14e-01    -1.21e-01   -1.70e-01
+-1.10    -1.62e-01    -9.46e-02   -1.18e-01
+-1.00    -1.12e-01    -6.85e-02   -6.87e-02
+-0.90    -6.45e-02    -4.36e-02   -2.51e-02
+-0.80    -2.43e-02    -2.11e-02   -1.87e-03
+-0.70    -2.93e-03    -4.97e-03   -2.81e-05
+-0.60    -1.20e-04    -3.32e-04   +0.00e+00
+-0.50    -4.50e-06    -1.32e-05   +0.00e+00
+-0.40    +0.00e+00    +0.00e+00   +0.00e+00
+-0.30    +0.00e+00    +0.00e+00   +0.00e+00
+-0.20    +0.00e+00    +0.00e+00   +0.00e+00
+-0.10    +0.00e+00    +0.00e+00   +0.00e+00
++0.00    +0.00e+00    +0.00e+00   +0.00e+00
++3.30    +0.00e+00    +0.00e+00   +0.00e+00
+|
+|
+[POWER_clamp]
+|Volts    typ          min         max
++0.00    +0.00e+00    +0.00e+00   +0.00e+00
+-1.60    +0.00e+00    +0.00e+00   +0.00e+00
+-1.70    +1.20e-06    +2.80e-06   +0.00e+00
+-1.80    +3.28e-05    +6.21e-05   +0.00e+00
+-1.90    +8.35e-04    +1.22e-03   +5.36e-05
+-2.00    +1.17e-02    +1.02e-02   +2.99e-03
+-2.10    +4.45e-02    +2.89e-02   +2.88e-02
+-2.20    +8.84e-02    +5.19e-02   +7.22e-02
+-2.30    +1.36e-01    +7.66e-02   +1.21e-01
+-2.40    +1.87e-01    +1.02e-01   +1.72e-01
+-2.50    +2.38e-01    +1.28e-01   +2.24e-01
+-2.60    +2.90e-01    +1.55e-01   +2.76e-01
+-2.70    +3.42e-01    +1.82e-01   +3.29e-01
+-2.80    +3.95e-01    +2.09e-01   +3.83e-01
+-2.90    +4.49e-01    +2.36e-01   +4.36e-01
+-3.00    +5.02e-01    +2.63e-01   +4.90e-01
+-3.30    +6.61e-01    +3.44e-01   +6.52e-01
+|
+|
+[Model]        CLKBUFF
+Model_type     Input
+Vinl = 0.8v
+Vinh = 2.0v
+|
+|variable         typ   min   max
+C_comp            2.1p  1.9p  2.3p
+|
+|variable         typ   min   max
+[Voltage Range]   3.1v  2.845 3.255
+|
+|Variable           typ    min    max
+[Temperature Range] 80     0      100 
+|
+|
+[GND_Clamp]
+|Voltage  I(typ)       I(min)      I(max)
+-2.00    -9.98e+00    -1.04e+01   -9.53e+00
+-1.50    -5.15e+00    -5.64e+00   -4.66e+00
+-1.40    -4.21e+00    -4.70e+00   -3.71e+00
+-1.30    -3.26e+00    -3.77e+00   -2.76e+00
+-1.20    -2.35e+00    -2.86e+00   -1.84e+00
+-1.10    -1.46e+00    -1.97e+00   -9.60e-01
+-1.00    -6.90e-01    -1.15e+00   -2.30e-01
+-0.90    -2.27e-01    -4.50e-01   -4.26e-03
+-0.80    -3.29e-02    -6.57e-02   -7.44e-05
+-0.70    -1.81e-03    -3.61e-03   -7.46e-06
+-0.60    -8.52e-05    -1.70e-04   -4.10e-07
+-0.50    -3.74e-06    -7.48e-06   -0.00e+00
+-0.40    -1.70e-07    -3.40e-07   -0.00e+00
+-0.30    -0.00e+00    -0.00e+00   -0.00e+00
+-0.20    -0.00e+00    -0.00e+00   -0.00e+00
+-0.10    -0.00e+00    -0.00e+00   -0.00e+00
+-0.00    -0.00e+00    -0.00e+00   -0.00e+00
++3.30    +0.00e+00    +0.00e+00   +0.00e+00
+|
+[POWER_Clamp]
+|Voltage  I(typ)       I(min)      I(max)
++0.00    +0.00e+00    +0.00e+00   +0.00e+00
+-1.50    +0.00e+00    +0.00e+00   +0.00e+00
+-1.60    +2.18e-05    +4.37e-05   +0.00e+00
+-1.70    +6.00e-05    +1.20e-04   +0.00e+00
+-1.80    +1.55e-04    +3.10e-04   +0.00e+00
+-1.90    +4.15e-04    +8.30e-04   +0.00e+00
+-2.00    +1.12e-03    +2.23e-03   +0.00e+00
+-2.10    +2.97e-03    +5.94e-03   +0.00e+00
+-2.20    +7.86e-03    +1.57e-02   +0.00e+00
+-2.30    +2.05e-02    +4.10e-02   +0.00e+00
+-2.40    +5.00e-02    +1.00e-01   +2.67e-05
+-2.50    +1.20e-01    +2.40e-01   +1.40e-04
+-2.60    +2.50e-01    +5.00e-01   +7.40e-04
+-2.70    +4.52e-01    +9.00e-01   +3.84e-03
+-2.80    +7.25e-01    +1.43e+00   +1.97e-02
+-2.90    +1.08e+00    +2.06e+00   +9.17e-02
+-3.00    +1.54e+00    +2.76e+00   +3.30e-01
+-3.10    +2.15e+00    +3.51e+00   +7.90e-01
+-3.20    +2.87e+00    +4.31e+00   +1.43e+00
+-3.30    +3.66e+00    +5.13e+00   +2.18e+00
+|
+|
+[END]

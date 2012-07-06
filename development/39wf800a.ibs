@@ -1,0 +1,402 @@
+|--------------------------------------------------------------------------
+[IBIS Ver]      2.1
+| SST39WF800A 48-ball TFBGA 8M Concurrent flash VCC 1.65->1.95v
+[File name]     39wf800a.ibs   
+[File Rev]      1.0
+[Date]       Wed Jan 10 13:21:42 PST 2007
+[Source]     Spice for driver outputs, measured for protection devices
+[Notes]      none
+[Disclaimer]    This information is for modeling purposes only, and is not 
+          guaranteed and will vary by component
+[Copyright]     Copyright SST Jan 2007 all rights reserved
+[Component]     SST39WF800A-xx-xx-B3Kx | 48-ball TFBGA device 
+[Manufacturer]  Silicon Storage Technology, SST
+[Package]
+| variable   typ     min     max
+R_pkg       182.6m  155.9m  209.2m     
+L_pkg       3.1nH   2.18nH  4.01nH
+C_pkg       0.51pF  0.27pF  0.74pF 
+
+[Pin]   signal_name  model_name
+A1      A3           IN_SST
+A2      A7           IN_SST
+A3      NC           IN_SST
+A4      WE#          IN_SST
+A5      A9           IN_SST
+A6      A13          IN_SST
+B1      A4           IN_SST
+B2      A17          IN_SST
+B3      NC           NC
+B4      NC           NC
+B5      A8           IN_SST
+B6      A12          IN_SST
+C1      A2           IN_SST
+C2      A6           IN_SST
+C3      A18          IN_SST
+C4      NC           NC
+C5      A10          IN_SST
+C6      A14          IN_SST
+D1      A1           IN_SST
+D2      A5           IN_SST
+D3      NC           NC
+D4      NC           NC
+D5      A11          IN_SST
+D6      A15          IN_SST
+E1      A0           IN_SST
+E2      DQ0          IO_SST
+E3      DQ2          IO_SST
+E4      DQ5          IO_SST
+E5      DQ7          IO_SST
+E6      A16          IN_SST
+F1      CE#          IN_SST
+F2      DQ8          IO_SST
+F3      DQ10         IO_SST
+F4      DQ12         IO_SST
+F5      DQ14         IO_SST
+F6      NC           NC
+G1      OE#          IN_SST
+G2      DQ9          IO_SST
+G3      DQ11         IO_SST
+G4      VDD          POWER
+G5      DQ13         IO_SST
+G6      DQ15         IO_SST
+H1      GND          GND
+H2      DQ1          IO_SST
+H3      DQ3          IO_SST
+H4      DQ4          IO_SST
+H5      DQ6          IO_SST
+H6      GND          GND
+
+|------------------------------------------------------
+| standard input with p & n diodes  
+|------------------------------------------------------
+[Model] IN_SST
+Model_type Input
+Vinl = 0.8v
+Vinh = 2.0v
+|        typ     min     max
+C_comp   2.0pF   NA      NA
+|                typ   min   max
+[Voltage Range]  1.80v 1.65v 1.95v
+[GND_clamp]
+|
+|voltage       I(typ)       I(min)   I(max)
+
+-1.80v        -423.6m       NA       NA
+-1.75v        -407.0m       NA       NA
+-1.70v        -389.2m       NA       NA
+-1.65v        -371.3m       NA       NA
+-1.60v        -353.2m       NA       NA
+-1.55v        -328.7m       NA       NA
+-1.50v        -310.0m       NA       NA
+-1.45v        -288.1m       NA       NA
+-1.40v        -269.1m       NA       NA
+-1.35v        -246.5m       NA       NA
+-1.30v        -223.9m       NA       NA
+-1.25v        -204.3m       NA       NA
+-1.20v        -181.5m       NA       NA
+-1.15v        -162.0m       NA       NA
+-1.10v        -139.6m       NA       NA
+-1.05v        -117.0m       NA       NA
+-1.00v        -97.29m       NA       NA
+-0.95v        -75.95m       NA       NA
+-0.90v        -59.66m       NA       NA
+-0.85v        -41.72m       NA       NA
+-0.80v        -28.14m       NA       NA
+-0.75v        -18.09m       NA       NA
+-0.70v        -11.72m       NA       NA
+-0.65v        -8.187m       NA       NA
+-0.60v        -5.926m       NA       NA
+-0.55v        -3.818m       NA       NA
+-0.50v        -2.355m       NA       NA
+-0.45v        -1.395m       NA       NA
+-0.40v        -0.581m       NA       NA
+-0.35v        -0.206m       NA       NA
+-0.30v        -0.038m       NA       NA
+-0.25v        -0.007m       NA       NA
+-0.20v        -0.001m       NA       NA
+-0.15v         0.000m       NA       NA
+-0.10v         0.000m       NA       NA
+-0.05v         0.000m       NA       NA
+-0.00v         0.000m       NA       NA
+ 1.00v         0.000m       NA       NA
+ 1.80v         0.000m       NA       NA
+ 
+[POWER_clamp]
+|voltage     I(typ)        I(min)    I(max)
+1.80v        0.000m        NA        NA
+1.00v        0.000m        NA        NA
+0.50v        0.000m        NA        NA
+0.00v        0.000m        NA        NA
+-0.50v       0.000m        NA        NA
+-1.00v       0.000m        NA        NA
+-1.80v       0.000m        NA        NA
+
+
+|---------------------------------------------------
+|
+| IO_SST model
+|
+|---------------------------------------------------
+[Model] IO_SST
+Model_type I/O
+Vinl = 0.8v
+Vinh = 2.0v
+
+|       typ     min     max
+C_comp  5.0pF   3.0pF   7.0pF
+|
+|                      typ     min     max
+[Temperature range]     25      -20      85
+|
+|                    typ     min     max
+[Voltage range]      1.80v   1.65v   1.95v
+|
+[Pulldown]
+|    Voltage    I(typ)       I(min)       I(max)
+     -1.80V     -144.30m     -128.90m     -165.50m
+     -1.60V     -130.30m     -116.10m     -149.90m
+     -1.55V     -126.70m     -112.80m     -145.90m
+     -1.50V     -123.00m     -109.40m     -141.80m
+     -1.45V     -119.30m     -106.00m     -137.60m
+     -1.40V     -115.50m     -102.60m     -133.40m
+     -1.35V     -111.70m      -99.10m     -129.10m
+     -1.30V     -107.90m      -95.58m     -124.70m
+     -1.25V     -104.00m      -92.02m     -120.40m
+     -1.20V     -100.00m      -88.42m     -115.90m
+     -1.15V      -96.02m      -84.80m     -111.40m
+     -1.10V      -91.99m      -81.14m     -106.90m
+     -1.05V      -87.92m      -77.45m     -102.30m
+     -1.00V      -83.82m      -73.73m      -97.63m
+     -0.95V      -79.69m      -69.99m      -92.94m
+     -0.90V      -75.52m      -66.23m      -88.22m
+     -0.85V      -71.33m      -62.45m      -83.45m
+     -0.80V      -67.11m      -58.65m      -78.64m
+     -0.75V      -62.87m      -54.84m      -73.79m
+     -0.70V      -58.61m      -51.02m      -68.92m
+     -0.65V      -54.33m      -47.20m      -64.01m
+     -0.60V      -50.05m      -43.38m      -59.08m
+     -0.55V      -45.75m      -39.56m      -54.13m
+     -0.50V      -41.46m      -35.75m      -49.16m
+     -0.45V      -34.17m      -31.96m      -44.19m
+     -0.40V      -32.89m      -28.20m      -39.21m
+     -0.35V      -28.63m      -24.46m      -34.22m
+     -0.30V      -24.39m      -20.77m      -29.25m
+     -0.25V      -20.18m      -17.12m      -24.28m
+     -0.20V      -16.02m      -13.53m      -19.34m
+     -0.15V      -11.90m      -10.00m      -14.43m
+     -0.10V       -7.85m       -6.57m       -9.56m
+     -0.05V       -3.88m       -3.22m       -4.74m
+      0.00V        0.00m        0.00m        0.00m
+      0.05V        3.74m        3.07m        4.61m
+      0.10V        7.29m        5.96m        9.03m
+      0.15V       10.66m        8.67m       13.26m
+      0.20V       13.84m       11.20m       17.31m
+      0.25V       16.85m       13.56m       21.17m
+      0.30V       19.68m       15.74m       24.84m
+      0.35V       22.34m       17.75m       28.33m
+      0.40V       24.82m       19.58m       31.63m
+      0.45V       27.12m       21.25m       34.76m
+      0.50V       29.25m       22.75m       37.70m
+      0.55V       31.21m       24.09m       40.46m
+      0.60V       33.00m       25.26m       43.05m
+      0.65V       34.62m       26.26m       45.46m
+      0.70V       36.08m       27.11m       47.69m
+      0.75V       37.37m       27.79m       49.74m
+      0.80V       38.49m       28.33m       51.63m
+      0.85V       39.45m       28.73m       53.34m
+      0.90V       40.25m       29.02m       54.88m
+      0.95V       40.90m       29.23m       56.25m
+      1.00V       41.40m       29.40m       57.45m
+      1.10V       42.07m       29.64m       59.34m
+      1.20V       42.47m       29.80m       60.59m
+      1.30V       42.73m       29.92m       61.60m
+      1.40V       42.93m       30.02m       61.81m
+      1.50V       43.07m       30.10m       62.14m
+      1.60V       43.19m       30.16m       62.37m
+      1.70V       43.29m       30.22m       62.56m
+      1.80V       43.37m       30.27m       62.71m
+      1.90V       43.44m       30.32m       62.83m
+      2.00V       43.51m       30.36m       62.94m
+      2.50V       44.51m       31.93m       63.67m
+      3.00V       49.17m       36.81m       68.27m
+      3.30V       53.10m       40.66m       72.47m
+      3.60V       57.56m       44.97m       77.32m
+      
+
+[Pullup]
+|    Voltage     I(typ)       I(min)       I(max)
+      3.60V      -60.89m      -52.10m      -75.72m
+      3.50V      -55.82m      -47.35m      -70.13m
+      3.20V      -40.95m      -33.52m      -53.57m
+      3.00V      -31.61m      -24.94m      -42.96m
+      2.80V      -23.07m      -17.24m      -33.06m
+      2.50V      -12.92m      -8.514m      -20.58m
+      2.00V      -8.677m      -5.736m      -13.32m
+      1.95V      -8.670m      -5.731m      -13.31m
+      1.90V      -8.662m      -5.726m      -13.30m
+      1.85V      -8.654m      -5.721m      -13.28m
+      1.80V      -8.646m      -5.715m      -13.27m
+      1.75V      -8.638m      -5.709m      -13.26m
+      1.70V      -8.629m      -5.703m      -13.25m
+      1.65V      -8.620m      -5.697m      -13.23m
+      1.60V      -8.610m      -5.690m      -13.22m
+      1.55V      -8.600m      -5.683m      -13.20m
+      1.50V      -8.589m      -5.676m      -13.18m
+      1.45V      -8.577m      -5.668m      -13.17m
+      1.40V      -8.565m      -5.660m      -13.15m
+      1.35V      -8.553m      -5.651m      -13.13m
+      1.30V      -8.539m      -5.642m      -13.11m
+      1.25V      -8.525m      -5.632m      -13.09m
+      1.20V      -8.509m      -5.622m      -13.06m
+      1.15V      -8.493m      -5.611m      -13.04m
+      1.10V      -8.475m      -5.598m      -13.01m
+      1.05V      -8.455m      -5.585m      -12.98m
+      1.00V      -8.432m      -5.569m      -12.94m
+      0.95V      -8.405m      -5.550m      -12.90m
+      0.90V      -8.371m      -5.525m      -12.84m
+      0.85V      -8.324m      -5.487m      -12.77m
+      0.80V      -8.251m      -5.425m      -12.67m
+      0.75V      -8.141m      -5.323m      -12.52m
+      0.70V      -7.983m      -5.174m      -12.32m
+      0.65V      -7.773m      -4.973m      -12.06m
+      0.60V      -7.508m      -4.719m      -11.75m
+      0.55V      -7.187m      -4.410m      -11.37m
+      0.50V      -6.811m      -4.048m      -10.94m
+      0.45V      -6.379m      -3.631m      -10.45m
+      0.40V      -5.892m      -3.161m      -9.899m
+      0.35V      -5.349m      -2.636m      -9.290m
+      0.30V      -4.750m      -2.057m      -8.623m
+      0.25V      -4.096m      -1.425m      -7.896m
+      0.20V      -3.387m      -0.739m      -7.112m
+      0.15V      -2.622m       0.000m      -6.269m
+      0.10V      -1.803m       0.793m      -5.368m
+      0.05V      -0.929m       1.635m      -4.410m
+      0.00V       0.000m       2.522m      -3.393m
+     -0.05V       0.982m       3.449m      -2.320m
+     -0.10V       2.013m       4.411m      -1.188m
+     -0.15V       3.087m       5.406m       0.000m
+     -0.20V       4.201m       6.430m       1.243m
+     -0.25V       5.349m       7.479m       2.534m
+     -0.30V       6.529m       8.550m       3.869m
+     -0.35V       7.737m       9.643m       5.243m
+     -0.40V       8.969m       10.76m       6.651m
+     -0.45V       10.22m       11.89m       8.089m
+     -0.50V       11.50m       13.03m       9.555m
+     -0.55V       12.79m       14.18m       11.04m
+     -0.60V       14.10m       15.34m       12.55m
+     -0.65V       15.42m       16.51m       14.08m
+     -0.70V       16.75m       17.68m       15.63m
+     -0.75V       18.09m       18.85m       17.20m
+     -0.80V       19.43m       20.03m       18.77m
+     -0.85V       20.78m       21.21m       20.35m
+     -0.90V       22.12m       22.38m       21.94m
+     -0.95V       23.47m       23.55m       23.53m
+     -1.00V       24.82m       24.72m       25.12m
+     -1.05V       26.17m       25.88m       26.71m
+     -1.10V       27.51m       27.04m       28.31m
+     -1.15V       28.85m       28.19m       29.90m
+     -1.20V       30.18m       29.34m       31.49m
+     -1.25V       31.51m       30.47m       33.07m
+     -1.30V       32.82m       31.60m       34.65m
+     -1.35V       34.13m       32.72m       36.22m
+     -1.40V       35.43m       33.83m       37.78m
+     -1.45V       36.72m       34.93m       39.33m
+     -1.50V       38.00m       36.02m       40.88m
+     -1.55V       39.27m       37.11m       42.41m
+     -1.60V       40.53m       38.19m       43.93m
+     -1.80V       45.44m       42.47m       49.88m
+     
+
+
+[GND_clamp]
+|
+|Voltage     I(typ)   I(min)  I(max)   
+
+ -1.80v     -529.13m    NA     NA
+ -1.75v     -497.01m    NA     NA
+ -1.70v     -468.13m    NA     NA
+ -1.65v     -439.10m    NA     NA
+ -1.60v     -409.91m    NA     NA
+ -1.55v     -380.55m    NA     NA
+ -1.50v     -351.18m    NA     NA
+ -1.45v     -317.77m    NA     NA
+ -1.40v     -288.51m    NA     NA
+ -1.35v     -259.61m    NA     NA
+ -1.30v     -231.07m    NA     NA
+ -1.25v     -202.98m    NA     NA
+ -1.20v     -175.35m    NA     NA
+ -1.15v     -149.03m    NA     NA
+ -1.10v     -124.03m    NA     NA
+ -1.05v     -97.573m    NA     NA
+ -1.00v     -76.862m    NA     NA
+ -0.95v     -56.876m    NA     NA
+ -0.90v     -39.997m    NA     NA
+ -0.85v     -26.477m    NA     NA
+ -0.80v     -16.404m    NA     NA
+ -0.75v     -10.538m    NA     NA
+ -0.70v     -6.508m     NA     NA
+ -0.65v     -4.413m     NA     NA
+ -0.60v     -2.801m     NA     NA
+ -0.55v     -1.569m     NA     NA
+ -0.50v     -0.719m     NA     NA
+ -0.45v     -0.293m     NA     NA
+ -0.40v     -0.088m     NA     NA
+ -0.35v     -0.015m     NA     NA
+ -0.30v     -0.003m     NA     NA
+ -0.25v      0.000m     NA     NA
+ -0.20v      0.000m     NA     NA
+  0.00v      0.000m     NA     NA
+  0.50v      0.000m     NA     NA
+  1.00v      0.000m     NA     NA
+  1.50v      0.000m     NA     NA
+  1.80v      0.000m     NA     NA
+ 
+[POWER_clamp]
+|voltage    I(typ)       I(min)  I(max)
+  1.80v     0.000m       NA      NA
+  1.50v     0.000m       NA      NA
+  1.00v     0.000m       NA      NA
+  0.50v     0.000m       NA      NA
+  0.00v     0.000m       NA      NA
+ -0.10v     0.000m       NA      NA
+ -0.20v     0.000m       NA      NA
+ -0.30v     0.001m       NA      NA
+ -0.35v     0.002m       NA      NA
+ -0.40v     0.010m       NA      NA
+ -0.45v     0.046m       NA      NA
+ -0.50v     0.120m       NA      NA
+ -0.55v     0.254m       NA      NA
+ -0.60v     0.462m       NA      NA
+ -0.65v     0.852m       NA      NA
+ -0.70v     1.435m       NA      NA
+ -0.75v     3.021m       NA      NA
+ -0.80v     7.157m       NA      NA
+ -0.85v     12.363m      NA      NA
+ -0.90v     19.026m      NA      NA
+ -0.95v     26.502m      NA      NA
+ -1.00v     36.386m      NA      NA
+ -1.05v     47.852m      NA      NA
+ -1.10v     59.916m      NA      NA
+ -1.15v     73.825m      NA      NA
+ -1.20v     89.190m      NA      NA
+ -1.25v     106.011m     NA      NA
+ -1.30v     124.288m     NA      NA
+ -1.35v     144.021m     NA      NA
+ -1.40v     165.210m     NA      NA
+ -1.45v     187.856m     NA      NA
+ -1.50v     211.957m     NA      NA
+ -1.55v     237.514m     NA      NA
+ -1.60v     264.528m     NA      NA
+ -1.65v     292.997m     NA      NA
+ -1.70v     322.922m     NA      NA
+ -1.75v     354.304m     NA      NA
+ -1.80v     387.142m     NA      NA
+
+
+[Ramp]
+|  variable       typ       min       max
+    dV/dt_r   0.26/0.74n   0.16/1.11n   0.45/0.35n
+    dV/dt_f   0.81/7.27n   0.64/11.3n   0.99/4.84n
+
+[End]

@@ -1,0 +1,186 @@
+|--------------------------------------------------------------------------
+[IBIS Ver]      2.1
+| sst29le010 32 pin DIP 1meg bit page-write flash VCC 3.0->3.6v
+[File name]     29le010.ibs   
+[File Rev]      1.0
+[Date]          Tue Jan  7 2003
+[Source]        Spice for driver outputs, measured for protection devices
+[Notes]         none
+[Disclaimer]    This information is for modeling purposes only, and is not 
+                guaranteed and will vary by coponent
+[Copyright]     Copyright SST Wed Jan 7 2003, all rights reserved
+[Component]     SST29LE010-xxx-xx-PH | DIP 32 pin
+[Manufacturer]  Silicon Storage Technology, SST
+[Package]
+| variable      typ     min     max
+R_pkg           60m     58m     62m     
+L_pkg        10.0nH   5.0nH    15.0nH
+C_pkg         2.0pF   1.0pF     3.0pF
+[Pin]   signal_name     model_name
+1       NC              NC
+2       A16             IN_SST
+3       A15             IN_SST
+4       A12             IN_SST
+5       A7              IN_SST
+6       A6              IN_SST
+7       A5              IN_SST
+8       A4              IN_SST
+9       A3              IN_SST
+10      A2              IN_SST
+11      A1              IN_SST
+12      A0              IN_SST
+13      DQ0             IO_SST
+14      DQ1             IO_SST
+15      DQ2             IO_SST
+16      GND             GND
+17      DQ3             IO_SST
+18      DQ4             IO_SST
+19      DQ5             IO_SST
+20      DQ6             IO_SST
+21      DQ7             IO_SST
+22      CE#             IN_SST
+23      A10             IN_SST
+24      OE#             IN_SST
+25      A11             IN_SST
+26      A9              IN_SST
+27      A8              IN_SST
+28      A13             IN_SST
+29      A14             IN_SST
+30      NC              NC
+31      WE#             IN_SST
+32      VDD             POWER
+
+|---------------------------------------------------
+|
+| IO model
+|
+|---------------------------------------------------
+[Model] IO_SST
+Model_type I/O
+Vinl = 0.8V
+Vinh = 2.0V
+|       typ     min     max
+C_comp  5.0pF   3.0pF   7.0pF
+|
+|                       typ     min     max
+[Temperature range]     25      0       70
+|
+|                       typ     min     max
+[Voltage range]         3.3     3.0     3.6
+[Pulldown]
+|       Voltage I(typ)  I(min)  I(max)
+        -3.6v  -50.0m  -32.4m  -66.0m
+        -3.0v  -50.0m  -32.4m  -66.0m
+        -2.0v  -49.5m  -32.4m  -65.8m
+        -1.0v  -46.4m  -30.4m  -61.1m
+        -0.5v  -26.3m  -18.9m  -33.3m
+        -0.2v  -10.5m   -7.4m  -13.4m
+         0.0v    0.0m    0.0m    0.0m
+         0.1v    5.1m    3.5m    6.4m
+         0.2v   10.0m    6.9m   12.9m
+         0.3v   14.6m   10.1m   18.9m
+         0.4v   18.9m   13.0m   24.6m
+         0.5v   22.9m   15.7m   30.0m
+         1.0v   38.3m   25.5m   51.3m
+         1.5v   45.8m   29.5m   63.4m
+         2.0v   48.2m   30.6m   67.8m
+         2.5v   49.1m   30.8m   69.4m
+         3.0v   49.1m   31.0m   69.9m
+         3.5v   49.3m   31.1m   70.1m
+         3.6v   49.3m   31.1m   70.2m
+         4.0v   49.8m   31.2m   70.4m
+         5.0v   50.1m   31.5m   71.6m
+         6.0v   50.5m   31.7m   72.2m
+|
+[pullup]
+|       Voltage I(typ)  I(min)  I(max)
+         6.0v  -26.5m  -15.2m  -42.4m
+         5.0v  -26.4m  -15.1m  -41.4m
+         4.0v  -24.4m  -14.6m  -35.8m
+         3.6v  -23.3m  -14.0m  -35.4m
+         3.5v  -23.2m  -13.9m  -35.2m
+         3.0v  -22.8m  -13.6m  -34.6m
+         2.5v  -22.3m  -13.4m  -33.6m
+         2.0v  -21.3m  -13.0m  -31.5m
+         1.5v  -19.1m  -12.0m  -27.3m
+         1.0v  -14.8m   -9.6m  -21.9m
+         0.5v   -8.3m   -5.5m  -11.2m
+         0.4v   -6.8m   -4.5m   -9.1m
+         0.3v   -5.2m   -3.5m   -6.9m
+         0.2v   -3.5m   -2.4m   -4.7m
+         0.1v   -1.8m   -1.2m   -2.4m
+         0.0v    0.0m    0.0m    0.0m
+        -0.1v    1.8m    1.2m    2.4m
+        -0.2v    3.7m    2.6m    4.9m
+        -0.4v    7.7m    5.4m   10.1m
+        -0.7v   13.9m    9.8m   18.1m
+        -1.0v   18.0m   11.5m   24.4m
+        -2.0v   19.3m   12.4m   26.4m
+        -3.0v   19.7m   12.7m   26.9m
+        -3.6v   19.9m   12.8m   27.1m
+[GND_clamp]
+|    voltage    I(typ) I(min) I(max)
+      -3.3v    -420.0m   NA     NA
+      -2.5v    -360.0m   NA     NA
+      -2.0v    -260.0m   NA     NA
+      -1.4v    -140.0m   NA     NA
+      -1.2v    -100.0m   NA     NA
+      -1.0v    -040.0m   NA     NA
+      -0.8v     -10.0m   NA     NA
+      -0.6v      -0.2m   NA     NA
+      -0.4v      -0.0m   NA     NA
+      -0.2v      -0.0m   NA     NA
+       0.0v       0.0m   NA     NA
+       3.3v       0.0m   NA     NA
+[POWER_clamp]
+|    voltage    I(typ) I(min) I(max)
+       3.3v     0        NA     NA
+       0.0v     0        NA     NA
+      -0.3v     0        NA     NA
+      -0.6v     0.5m     NA     NA
+      -0.8v    10.0m     NA     NA
+      -1.0v    24.0m     NA     NA
+      -1.2v    45.0m     NA     NA
+      -1.4v    65.0m     NA     NA
+      -1.6v    90.0m     NA     NA
+      -2.1v   150.0m     NA     NA
+      -2.4v   240.0m     NA     NA
+      -3.3v   348.0m     NA     NA
+|
+[Ramp]
+|variable       typ             min             max
+dV/dt_r         0.61/1.0n       0.39/1.6n       1.26/0.6n     
+dV/dt_f         1.26/2.5n       1.22/4.7n       1.56/1.6n     
+[Model] IN_SST
+Model_type Input
+Vinl = 0.8v
+Vinh = 2.0v
+|      typ     min   max
+C_comp 2.0pF   NA    NA
+|                typ  min  max
+[Voltage Range]  3.3v 3.0v 3.6v
+[GND_clamp]
+|
+|voltage I(typ)   I(min)     I(max)
+  -3.3v   -479.0m     NA         NA
+  -2.5v   -359.0m     NA         NA
+  -2.0v   -284.0m     NA         NA
+  -1.8v   -254.0m     NA         NA
+  -1.6v   -224.0m     NA         NA
+  -1.4v   -115.0m     NA         NA
+  -1.2v    -80.0m     NA         NA
+  -1.0v    -54.0m     NA         NA
+  -0.8v    -16.0m     NA         NA
+  -0.6v     -0.1m     NA         NA
+  -0.4v     -0.0m     NA         NA
+  -0.0v      0.0m     NA         NA
+   1.0v      0.0m     NA         NA
+   6.6v      0.0m     NA         NA
+[POWER_clamp]
+|voltage  I(typ) I(min)     I(max)
+  -3.3v     0     NA         NA
+   0.0v     0     NA         NA
+   3.3v     0     NA         NA
+   6.6v     0     NA         NA
+
+[End]

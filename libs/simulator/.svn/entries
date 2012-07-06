@@ -1,0 +1,92 @@
+8
+
+dir
+56
+file:///home/charles/SW_Development/svn/eispice/libs/simulator
+file:///home/charles/SW_Development/svn/eispice
+
+
+
+2008-03-14T12:39:39.298822Z
+56
+charles
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+00cb2dbf-8574-4d22-878b-0035d21bbc77
+
+devices
+dir
+
+include
+dir
+
+makefile.dep
+file
+
+
+
+
+2008-03-14T12:49:42.000000Z
+9ab7a85af3061266ab4ee4db91fd1789
+2007-12-01T20:23:04.557901Z
+49
+charles
+has-props
+
+tester.c
+file
+
+
+
+
+2008-03-14T12:49:42.000000Z
+e5ae23fea78ab60400d5295323574745
+2007-10-23T22:47:05.800496Z
+39
+charles
+has-props
+
+core
+dir
+
+COPYING
+file
+
+
+
+
+2008-03-14T12:49:42.000000Z
+ebb5c50ab7cab4baeffba14977030c07
+2007-04-28T19:54:30.470073Z
+1
+charles
+has-props
+
+math
+dir
+
+Makefile
+file
+57
+
+
+
+2008-03-14T14:10:36.000000Z
+f356295f6e33859394076c2a109dc547
+2008-03-14T14:15:38.414864Z
+57
+charles
+has-props
+
