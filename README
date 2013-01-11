@@ -1,0 +1,417 @@
+Source: http://www.thedigitalmachine.net/eispice.manual.html
+-----
+TABLE OF CONTENTS:
+
+ * Introduction
+ * Features
+ * Usage
+ * The Circuit
+ * Devices
+ * Utilities
+
+-----
+INTRODUCTION:
+*** NOTE ***
+
+This manual is far from complete. For anything not covered by this manual you can refer to the python doc-strings and the examples (and/or feel free to ask any questions you may have on the eispice mailing list). You can access the doctrings by either using the built-in python help function or by using the stand-alone pydoc utility that comes with Python (thanks Thomas for finding this tool).
+
+$ pydoc -g
+Available with Python2.x. Opens a GUI where you can enter a search string e.g. "eispice". This opens your web browser and shows the eispice docstrings in HTML.
+Alternatively you can start a pydoc server:
+
+$ pydoc -p 8099
+This lets you access all python documentation via http://localhost:8099.
+
+
+Status of This Document:
+
+eispice is still being actively developed and as a result this User's Manual is a continuous work in progress. It doesn't describe the entire functionality of the tool and it may have glaring technical inaccuracies (and more likely glaring grammatical errors). If you find any please let me know, by either posting to the Mailing List or sending me an email at: charles@thedigitalmachine.net .
+
+This document only applies to the most recent version of eispice, if you're using an older version please upgrade to the most recent version.
+
+
+Purpose:
+
+eispice is a clone of the Berkley Spice 3 Simulation Engine optimized for High Speed Digital Design with a Python based front-end. It contains a subset of standard spice3 device models and a set of unique models e.g. direct IBIS model support, Python based Behavioral models, etc. The purpose of this document is to provide a reference for eispice Users. Those new to eispice may want to also check out the Tutorials and the example scripts in the test/recursion folder of the source-code distribution.
+
+
+Intended Audience:
+
+The indented audience for this document is the eispice user (development documents are stored separately). A basic understanding of Berkley Spice 3 is assumed, for an introduction to Spice take a look at Spice Opus. A basic understanding of Python is also assumed. If you are new to Python you may want to take a look at a Python Tutorial.
+
+If you've never used Python before don't let it scare you off. It shouldn't take more than a half hour or so for you to pick up enough Python to get a simulation running and hopefully you find it much more powerful, and liberating compared to basic spice syntax.
+
+-----
+FEATURES:
+
+The following lists highlight some common and unique features of eispice:
+Spice3 Features:
+
+    Transient Analysis And Operating Point Analysis
+    B - Non-linear current and voltage source models.
+    I and V - Independent Source Models
+    R, L, and C - Device Models
+    T - Lossless Transmission Line Model
+    D - Diode Model
+    Subckt support (same functionality with a very different syntax).
+    Supports a simple plotter (Tk based).
+
+Unique Features:
+
+    Access to the Python Language to manipulate Spice Decks and results.
+    Contains an IBIS model import tool plus driver, receiver, and pin models.
+    Uses the SuperLU Matrix Library.
+    A piece-wise cubic-spline extension of the traditional pwl, same usage except pwc keyword is used.
+    New device models for VI Curves, and TA x VI Curves
+    Improved B-Element that includes a time variable.
+    B-Element based on a Python call-back, i.e. can use Python statements within a B-element model.
+    Plus many more additions and improvements.
+
+-----
+USAGE:
+Installation:
+
+For Windows users eispice is distributed as a binary installation executable. It can be installed / uninstalled like any other Windows application. Simply download and install the Windows version of Python 2.5, download and install the Windows version of Numpy and then download and install the Windows Binary version of eispice.
+
+For other systems, i.e. Linux, eispice is distributed as source code. You will need to compile and install it before using it. You can also be compile from source on a Windows system using a gcc based compiler, like the gcc compiler that comes with cygwin, or mingw.
+
+To install eispice from the source code distribution, download the most recent release from the Download Page. Uncompress it "tar xvjf eispice-x.x.tar.bz2". Cd into the new eispice directory and run "make install". This will put the eispice binaries in your local Python library repository.
+
+As of release 0.9 in order to use eispice you will need to have Python and the Numpy and Scipy Python Module installed on your system.
+
+
+Running eispice:
+
+Fire up Python, i.e. run "python" (on some systems python2, as python3.x is the default python version) from the command line and then import the eispice module with a "import eispice" command. Then you're off to the races, check out the Python scripts in the test/pass directory for some examples, or try out the example below or use the help command for up to data and maybe more detailed help, i.e. help(eispice), help(eispice.device), etc...
+
+
+Example:
+
+Before jumping into the nitty-gritty of eispice here's a simple example that should give you a taste of what you're up against, enter it into a text file and run it with a python myfile.py command or run the python interpreter with a "python" command at the command line and enter it line by line:
+
+	import eispice
+	cct = eispice.Circuit("Capacitor Test")
+	cct.Vx = eispice.V(1, eispice.GND, 4,
+  		eispice.Pulse(4, 8, '10n', '2n', '3n', '5n', '20n'))
+	cct.Cx = eispice.C(1, eispice.GND, '10n')
+	cct.tran('0.5n', '100n')
+	eispice.plot(cct)
+
+
+Basic Statement Types:
+
+Much like spice3 eispice statements come in 3 flavors. There are component definition commands which consist of a device names, types, connection nodes (strings or integers that represent node names), and parameter values. There are analysis commands, to run the Transient and Operating Point Analysis, and there are post processing commands, like plot.
+
+Most parameters can be defined as floating point numbers, i.e. 1.0, 13-9, etc. or strings with units, i.e. '10nF'.
+
+Node names may be arbitrary character strings, or integer values. The datum (ground) node must be named 0, '0', or eispice.GND.
+
+-----
+THE CIRCUIT:
+
+The Circuit is the main eispice class. In your average simulation, devices are added to a circuit, a simulation is run, and then the results are plotted or manipulated to determine some sort of characteristic of the circuit, e.g. under-shoot. Once a simulation has been run new devices can't be added, and devices can never be removed, but most parameter values can be changed and new simulations run on the same circuit, e.g. running through a series of termination resistor values to find which one minimizes under-shoot.
+
+To create a new circuit simply call it's constructor, the only argument is the circuit title.:
+	cct = eispice.Circuit("Title")
+
+To add a device to a circuit set a new device name to be equal to either pre-defined device, or a new device, e.g.
+	cct.R1 = Rx , or...
+	cct.R2 = eispice.R(2, 0, '20kOhm')
+For more details on device specifics refer to the Device Sections below.
+
+To run an analysis on a circuit call the analysis method, e.g.:
+	cct.tran('0.1n', '100n')
+	result = cct.results
+For more details refer to the Analysis Section below.
+
+To retrieve the results you can access the results member of the deck class which is a Numpy array, e.g.
+	print cct.results
+There is list of result headings called names, the list index corresponds to a row index in the results array, and the list value is a string representing the row name, e.g.
+	column = cct.names.index('v(1)') or...
+	name = cct.names[column]
+
+
+Circuit Class Methods:
+
+_init__(self, title='eispice')
+	Circuit constructor.
+
+	Arguments:
+  	title -- String containing the circuit's name.
+
+__setattr__(self, name, value)
+	Adds a device to the circuit, if it's a dictionary of devices
+	like a Subckt it adds all of the devices in the dict.
+
+check(self, name, value, type='v')
+	Raises an exception if the value of the variable at 0 seconds
+	does not equal the value supplied plus / minus 0.00001%.
+
+	Arguments:
+	name -- name of the node or device
+	value -- value to check against
+	type -- either Voltage or Current
+
+current(self, *variables)
+	Returns an array where the first column is time, and the subsequent
+	columns are the value of the current through each listed device.
+	Currents are only calculated through voltage sources and inductors
+	(plus a few other special devices).
+
+devices(self)
+	Prints a list of the devices in the circuit.
+
+op(self)
+	Runs an Operating Point analysis and sets the value of the circuit's
+	results array accordingly. It is equivalent to the Spice3 op command.
+
+tran(self, tstep, tstop, tmax=0.0)
+	Runs a Transient analysis and sets the value of the circuit's
+	results array accordingly. It is equivalent to the Spice3 tran
+	command.
+
+	Arguments:
+	tstep -- desired plotting increment, the actual time-steps will
+	vary from step to step, this is simply a suggestion
+	tstop -- the last time point to simulate
+	tmax -- maximum step size, it is set to tstep if not defined or 0.0
+
+voltage(self, *variables)
+	Returns a results array where the first column is time, and the
+	subsequent columns are the value of the voltage at each listed node.
+
+
+Circuit Class Data:
+
+results
+	Results of the last simulation.
+
+title
+	Circuit Title
+
+variables
+	List that contains the column headers for the results array.
+
+-----
+DEVICES:
+
+Resistor:
+
+	Syntax: R('pNode', 'nNode', resistance (Ohms))
+	Example: Rx = eispice.R('pNode', 'nNode', 10)
+	Parameters:
+	    x.R --> Resistance
+
+Inductor:
+
+	Syntax: L('pNode', 'nNode', inductance (Henrys))
+	Example: Lx = eispice.L('pNode', 'nNode', '10nH')
+	Parameters:
+	    x.L --> Inductance
+
+Capacitor:
+
+	Syntax: C('pNode', 'nNode', capacitance (Farads))
+	Example: Cx = eispice.C('pNode', 'nNode', '10pF')
+	Parameters:
+    	x.C --> Capacitance
+
+Source:
+
+	Syntax: (V or I)('pNode', 'nNode', DC, wave-opt.)
+	Examples:
+    	Vx = eispice.V('pNode', 'nNode', 10)
+    	Ix = eispice.I('pNode', 'nNode', -2, wave.pulse(2, 4))
+	Parameters:
+    	x.DC --> DC Value
+    	x.wave --> Optional Waveform
+
+	The optional waveform can be any of the objects listed below.
+
+	Waveforms:
+
+	All of the basic waveforms reside in the "wave" module so waveform declarations must be preceded by "wave.".
+
+	Sinusoidal:
+
+		Syntax: Sin(Vo, Va, Freq-opt., Td-opt., Theta-opt.)
+		Example: s = eispice.Sin(10, 20, '10M')
+		Parameters:
+    		x.Vo --> Offset
+    		x.Va --> Amplitude
+    		x.Fc --> Frequency, def. 1/tstop
+    		x.Td --> Delay, def. 0.0
+    		x.DF --> Damping Factor, def. 0.0
+
+	Single Frequency FM:
+
+		Syntax: SFFM(Vo, Va, Freq-opt., MDI-opt., Fs-opt.)
+		Example: s = eispice.SFFM(10, 20, '10M')
+		Parameters:
+    		x.Vo --> Offset
+    		x.Va --> Amplitude
+    		x.Fc --> Carrier Frequency, def. 1/tstop
+    		x.MDI --> Modulation Index, def. 0.0
+    		x.Fs --> Signal Frequency, def. 1/tstop
+
+	Exponential:
+
+		Syntax: Exp(V1, V2, Td1-opt., Tau1-opt., Td2-opt., Tau2-opt.)
+		Example: s = eispice.Exp(0, 4, '5n', '2n', '25n', '5n')
+		Parameters:
+    		x.V1 --> Initial Value
+    		x.V2 --> Pulsed Value
+    		x.Td1 --> Rise Delay Time, def. 0.0
+    		x.Tau1 --> Rise Time Constant, def. tstep
+    		x.Td2 --> Fall Delay Time, def. td1 + tstep
+    		x.Tau2 --> Fall Time Constant, def. tstep
+
+	Pulse:
+
+		Syntax: Pulse(V1, V2, Td-opt., Tr-opt., Tf-opt., PW-opt., Per-opt.)
+		Example: s = eispice.Pulse(4, 8, '10n', '2n', '3n', '5n', '20n')
+		Parameters:
+    		x.V1 --> Initial Value
+    		x.V2 --> Pulsed Value
+    		x.Td --> Delay Time, def. 0.0
+    		x.Tr --> Rise Time, def. tstep
+    		x.Tf --> Fall Time, def. tstep
+    		x.PW --> Pulse Width, def. tstop
+    		x.Per --> Period, def. tstop
+
+	Gaussian Pulse:
+
+		Syntax: Gauss(V1, V2, Td-opt., Tr-opt., Tf-opt., PW-opt., Per-opt.)
+		Example: s = eispice.Gauss(4, 8, '10n', '2n', '3n', '5n', '20n')
+		Parameters:
+    		x.V1 --> Initial Value
+    		x.V2 --> Pulsed Value
+    		x.Td --> Delay Time, def. 0.0
+    		x.Tr --> Rise Time, def. tstep
+    		x.Tf --> Fall Time, def. tstep
+    		x.PW --> Pulse Width, def. tstop
+    		x.Per --> Period, def. tstop
+
+	Piece-Wise (Linear or C-Spline):
+
+		Syntax: (PWL or PWC)([[x0,y0],[x1,y1],...])
+		Example:
+    		data = [
+    			['2n', 4],
+    			['12n', 3],
+    			['50n', 20],
+    			['75n', -20],
+    			['95n', -22]]
+    		s = eispice.PWL(data)
+		Parameters:
+    		x.type --> 'l' = linear, 'c' = cspline, readonly
+    		x.pw --> data array, readonly
+
+	Nonlinear Source:
+
+		Syntax: B('pNode', 'nNode', type, equation)
+		Example: Bx = eispice.B('2', GND, 'i', "4.7 * uramp(v(2,0))")
+		Parameters:
+    		x.type --> 'i' or 'v', readonly
+    		x.equation --> equation string, readonly
+
+	This is the most versatile device (and the easiest to abuse). This device should behave the same as the B element in Spice 3, i.e. it should be possible to cut and paste B element equations from spice 3 into this B elements equations string.
+
+	The equation string can consist of any of the following functions and operators: abs(), acosh(), acos(), asinh(), asin(), atanh(), atan(), cosh(), cos(), exp(), ln(), log(), sinh(), sin(), sqrt(), tan(), uramp(), u(), +, -, *, /, ^.
+
+	The function "u" is the unit step function, with a value of one for arguments greater than one and a value of zero for arguments less than zero. The function "uramp" is the integral of the unit step: for an input x, the value is zero if x is less than zero, or if x is greater than zero the value is x.
+
+	It is also possible to add a time variable to the B element equations using the keyword time, i.e. eispice.B(2, 0, device.Voltage, 'sin(2*3.14159*100e6*time)')
+
+	Nonlinear Capacitor:
+
+		Syntax: BC('pNode', 'nNode', type, equation)
+		Example: BCx = eispice.BC('2', GND, 'i', "4.7 * uramp(v(2,0))")
+		Parameters:
+    		x.type --> 'i' or 'v', readonly
+    		x.equation --> equation string, readonly
+
+	Refer to the Nonlinear Source.
+
+	Python Based Behavioral Model:
+
+		Syntax: PyB('pNode', 'nNode', type, variables, callback)
+		Example:
+			class MyDevice(eispice.PyB):
+  				def __init__(self, pNode, nNode):
+    			dev.PyB.__init__(self, pNode, nNode, Current, v(pNode), v(nNode), Time)
+  			def model(self, vP, vN, time):
+    			if time > 10e-9:
+      				return 2 * (vP - vN)
+    			else:
+      				return 0.0
+			d = Deck("Call-Back Time Test")
+			d.Vx = eispice.V(1, 0, 4)
+			d.PyBx = MyDevice(1, 0)
+		Parameters:
+    		x.type --> 'i' or 'v', readonly
+
+	This device is intended as a version of the B-Element that can make use of python commands. It provides an inheritable class that can be used to define Python based Behavioral models. The constructor takes as arguments, the positive node, the negative node, the type (Voltage or Current), and a list of node voltages, source currents, or 'Time' to be passed to the defined callback function, which is called model and should be part of the new device class.
+
+
+	Transmission Line:
+
+		Syntax: T('pNode0', 'nNode0', 'pNode1', 'nNode1', Z0, Td, loss-opt.)
+		Example: eispice.T('vi', GND, 'vo', GND, 50, '5n', 0.5)
+		Parameters:
+    		x.Z0 --> Characteristic Impedance
+    		x.Td --> Time Delay
+    		x.loss --> Loss Factor Times Length
+
+	VI Curve:
+
+		Syntax: VI('pNode', 'nNode', VI-PW, TA-PW-opt.)
+		Example:
+    		viData = [
+    			[-10, -10],
+    			[-5, -2],
+    			[0, 1],
+    			[1, 3],
+    			[5, 8],
+    			[10, 10],
+    			[12, 8]]
+    		taData = [
+    			[0, 1.0],
+    			['25n',0.52],
+    			['100n', 0.0]])
+    		VIx = eispice.VI(1, GND,eispice.PWL(viData), eispice.PWC(taData))
+		Parameters:
+    		x.VI --> VI Piece-Wise Object
+    		x.TA --> TA Piece-Wise Object
+
+	The optional TA Piece-Wise element multiplies the VI curve by the A factor depending on the simulation time, T. It is used for the basis of the IBIS model driver. If not included the element behaves like a run-of-the-mill VI Curve (also used for IBIS elements).
+
+-----
+UTILITIES:
+
+There are a handful of functions that are part of the eispice module that can be used to help out during a simulation (mostly for debug purposes).
+
+	Log File:
+
+		Syntax: logFile(filename)
+		Example: logFile("crud.log")
+
+	Usually the simulator library prints it's log messages (and debug messages if they are turned on with a compile-time option) to std-out, this function can be used to output the messages to a file instead.
+
+
+	Error File:
+
+		Syntax: errorFile(filename)
+		Example: errorFile("crud.err")
+
+	Usually the simulator library prints it's error and warning messages to std-err, this function can be used to output the messages to a file instead.
+
+
+	About:
+
+		Syntax: about()
+
+	Prints some library version information.
+
+
+....TBC
