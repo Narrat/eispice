@@ -33,7 +33,7 @@ all: Makefile $(EISPICE)
 
 $(EISPICE):
 	@echo Building Module
-	$(Q)python setup.py build $(PYFLAG)
+	$(Q)python2 setup.py build $(PYFLAG)
 	$(Q)cp build/*/simulator_.so module/
 	$(Q)rm -fdr build
 
@@ -77,17 +77,17 @@ clean:
 
 uninstall:
 	@echo Un-Installing
-	$(Q)python uninstall.py
+	$(Q)python2 uninstall.py
 	
 
 install: uninstall
 	@echo Installing
-	$(Q)python setup.py build $(PYFLAG) install
+	$(Q)python2 setup.py build $(PYFLAG) install
 	$(Q)rm -fdr ./build
 
 windist: $(LIBS)
 	@echo Installing
-	$(Q)python setup.py build $(PYFLAG) bdist_wininst
+	$(Q)python2 setup.py build $(PYFLAG) bdist_wininst
 	$(Q)cp ./dist/* .
 	$(Q)rm -fdr ./build
 	$(Q)rm -fdr ./dist
