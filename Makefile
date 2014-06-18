@@ -82,8 +82,7 @@ uninstall:
 
 install: uninstall
 	@echo Installing
-	$(Q)python2 setup.py build $(PYFLAG) install
-	$(Q)rm -fdr ./build
+	$(Q)python2 setup.py install
 
 windist: $(LIBS)
 	@echo Installing
