@@ -80,7 +80,7 @@ uninstall:
 	$(Q)python2 uninstall.py
 	
 
-install: uninstall
+install:
 	@echo Installing
 	$(Q)python2 setup.py install --root=${DESTDIR}
 
