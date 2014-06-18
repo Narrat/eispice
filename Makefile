@@ -82,7 +82,7 @@ uninstall:
 
 install: uninstall
 	@echo Installing
-	$(Q)python2 setup.py install
+	$(Q)python2 setup.py install --root=${DESTDIR}
 
 windist: $(LIBS)
 	@echo Installing
